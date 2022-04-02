@@ -50,7 +50,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Atualmente a academia de crossfit não possui um sistema de agendamento de aulas. Portanto, um problema que se verifica é a recusa de alunos participarem dos treinos, devido a limitação de vagas. Além disso, o relatório de avaliação de física do aluno, disponibilizado pelo instrutor é em papel impresso. 
+Assim verifica-se uma possibilidade de ganhos claramente vísiveis, tanto aos alunos, quanto à academia e instrutores. Com sistema de agendamento espera-se um aumento considerável na quantidade de alunos recebidos na academia. Também é claro a redução do tempo e recursos gastos com geração do relatório atráves do sistema.
+Veja abaixo os indices:
 
 ### Descrição Geral da Proposta
 
