@@ -6,7 +6,7 @@
 
 `3° SEMESTRE`
 
-O presente projeto busca agregar tecnologia com o bem estar físico. O aplicativo permite que usuários (alunos) consigam confirmar presença em treinos de crossfit disponibilizados por instrutores, atentando-se para a quantidade de vagas disponível cada treino específico.
+O presente projeto busca agregar tecnologia com o bem estar físico. O aplicativo permite que usuários (alunos) consigam confirmar presença em treinos de crossfit disponibilizados pelos instrutores, atentando-se a quantidade de vagas disponível cada treino específico.
 Além de permitir que os treinadores possam avaliar seus devidos alunos, divulgando os resultados pelo próprio sistema.
 
 ## Integrantes
