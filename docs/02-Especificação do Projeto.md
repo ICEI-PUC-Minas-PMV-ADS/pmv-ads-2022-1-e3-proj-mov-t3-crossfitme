@@ -7,9 +7,6 @@ Segue abaixo, todos os detalhes que especificam a abordagem do projeto...
 ## Personas
 
 Weruska Aparecida 
-
- 
-
  
 
 Weruska tem 20 anos, namora há 4 anos com Leonardo e mora em Divinópolis-Mg. Atualmente está no 7º período da faculdade de Fisioterapia a noite e trabalha como estagiária de 08:00 às 13:00 de segunda a sexta-feira. Como ela tem uma vida muito corrida, aonde é complicado conciliar os estudos e o trabalho, ela está procurando uma atividade física de no máximo 1 hora com alta intensidade para definir o seu corpo e vê essa oportunidade praticando CrossFit. Mas ela não quer ter horário marcado para realizar essa atividade e procura uma academia de CrossFit com diversos horários para realizar a aula e que possui um aplicativo para fazer o agendamento, assim não corre o risco de chegar no local e estar cheio. 
@@ -18,10 +15,10 @@ Weruska tem 20 anos, namora há 4 anos com Leonardo e mora em Divinópolis-Mg. A
 Maria Eduarda 
 
  
-
 Maria Eduarda tem 37 anos, casada há 7 anos com seu marido Fábio e com um filho de 3 anos. Reside em Divinópolis-Mg e trabalha como Analista de Dados na empresa Logus de 08:00 as 17:00 de segunda a sexta-feira. Ela tem como objetivo emagrecer pois não está feliz com seu peso e com seu corpo no momento e está em busca de uma atividade física dinâmica, onde os exercícios não são repetitivos e que consegue realizar com mais pessoas. Ela ficou interessada em fazer CrossFit, mas como procura resultados rápidos, está em busca de um local que realiza avaliações físicas todo mês e que tem à disposição um aplicativo para fazer o acompanhamento desses resultados. 
-José Maria 
 
+
+José Maria 
  
 
 José Maria tem 33 anos, solteiro e reside em Divinópolis-Mg. Trabalha atualmente como atendente de pessoa física no banco Safra de segunda a sexta-feira de 08:30 as 17:30. Ele é apaixonado por esportes, joga futebol 2 vezes na semana e faz ciclismo também 2 vezes. Está procurando alguma atividade para aumentar sua resistência e força física. Ficou interessado no CrossFit e está em busca de um plano para treinar 3 vezes na semana porque tem pouca flexibilidade de horários devido ao trabalho e as outras atividades que pratica e busca uma academia de CrossFit que possui um aplicativo que consiga realizar o agendamento dos dias e horários na semana que ele pode treinar. 
