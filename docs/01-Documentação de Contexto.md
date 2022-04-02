@@ -8,9 +8,6 @@ Para que uma nova unidade possa se destacar no mercado ela precisa ter algum dif
 ## Problema
 O problema que se busca resolver é a implantação de recursos tecnológicos para melhorar os processos de agendamento de aulas e divulgação de avaliações físicas dos alunos, nos ambientes de treino funcional (CrossFit). 
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa]()
-
 
 ## Objetivos
 
@@ -33,12 +30,12 @@ Como objetivos específicos, podemos ressaltar:
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Em tempos de pandemia, o mundo teve que se adaptar a uma realidade cada vez mais virtualizada, devido às restrições que a COVID-19 impôs a população. Em meio a toda essa virtualização, surgiu também a necessidade de novos recursos que atendessem a população e dentre eles, novos e inovadores aplicativos para smartphones. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Dentro deste contexto, identificamos a necessidade de aproximar as academias a seus alunos por meio de um aplicativo, onde será possível a interação de instrutores e alunos, além de outros recursos administrativos. 
+A proposta deste projeto proporcionará as partes envolvidas facilidade de acesso a informação, agilidade e ganhos relativos a tempo. 
 
-> **Links Úteis**:
-> -  ...
+Esperamos que estabelecimentos como academias, studios de crossfit e studios de funcional possam se inspirar neste trabalho, contribuindo assim para uma interação mais eficiente e simplificada entre alunos e instrutores. 
 
 ## Público-Alvo
 
