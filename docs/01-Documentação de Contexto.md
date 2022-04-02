@@ -6,11 +6,7 @@ O CrossFit, uma das principais tendências fitness da atualidade, é uma adapta�
 
 Para que uma nova unidade possa se destacar no mercado ela precisa ter algum diferencial, por isso, será desenvolvido um aplicativo que possa agregar valor à empresa disponibilizando funcionalidades úteis aos clientes e também aos colaboradores. 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
+O problema que se busca resolver é a implantação de recursos tecnológicos para melhorar os processos de agendamento de aulas e divulgação de avaliações físicas dos alunos, nos ambientes de treino funcional (CrossFit). 
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -19,9 +15,19 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral é a criação de uma aplicação móvel que mostre a disponibilidade de horários e vagas para uma aula, possibilitando a confirmação de presença, além de permitir aos instrutores cadastrarem o resultado das avaliações físicas dos seus alunos.  
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Como objetivos específicos, podemos ressaltar: 
+
+Identificar os alunos e colaboradores por meio de cadastro; 
+
+Inserir datas e horários de aulas; 
+
+Mostrar e/ou limitar a quantidade de alunos por aula; 
+
+Permitir que um colaborador faça o registro das avaliações físicas; 
+
+Permitir que o aluno visualize suas avaliações físicas; 
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
