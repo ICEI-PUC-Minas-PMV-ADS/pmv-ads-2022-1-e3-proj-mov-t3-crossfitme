@@ -50,9 +50,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Atualmente a academia de crossfit não possui um sistema de agendamento de aulas. Portanto, um problema que se verifica é a recusa de alunos participarem dos treinos, devido a limitação de vagas. Além disso, o relatório de avaliação de física do aluno, disponibilizado pelo instrutor é em papel impresso. 
-Assim verifica-se uma possibilidade de ganhos claramente vísiveis, tanto aos alunos, quanto à academia e instrutores. Com sistema de agendamento espera-se um aumento considerável na quantidade de alunos recebidos na academia. Também é claro a redução do tempo e recursos gastos com geração do relatório atráves do sistema.
-Veja abaixo os indices:
+Atualmente a academia de crossfit não possui um sistema de agendamento de aulas. Portanto, um dos grandes problemas verificados é a recusa de alunos participarem dos treinos, devido a limitação de vagas. Além disso, o relatório de avaliação física do aluno, disponibilizado pelo instrutor é em papel impresso. 
+Assim, claramente, verifica-se uma possibilidade de ganhos tanto aos alunos, instrutores quanto à academia. Com sistema de agendamento espera-se um aumento considerável na quantidade de alunos recebidos. Também é claro a redução do tempo e recursos gastos com geração do relatório atráves do sistema.
+
 
 ### Descrição Geral da Proposta
 
