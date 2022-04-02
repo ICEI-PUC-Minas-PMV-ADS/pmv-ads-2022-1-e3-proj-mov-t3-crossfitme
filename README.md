@@ -1,23 +1,23 @@
 # TÍTULO DO PROJETO
 
-`CURSO`
+`Análise e desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Processos de Negócios e de Desenvolvimento de Software`
 
-`SEMESTRE`
+`3° SEMESTRE`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Igor Vicente Machado  
+* Jean Stefan dos Santos Lima 
+* Leandro Ângelo Scardoelli  
+* Leonardo Barbosa Ferreira 
 
 ## Orientador
 
-* Nome completo do professor 1
+* Mateus Curcino de Lima
 
 ## Instruções de utilização
 
