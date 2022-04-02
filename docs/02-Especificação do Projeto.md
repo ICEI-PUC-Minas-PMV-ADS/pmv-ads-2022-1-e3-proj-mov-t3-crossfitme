@@ -77,7 +77,6 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 Usar o seguinte modelo: 
 
 ![Indicadores de Desempenho](img/IndicadorDesempenho.PNG)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
 
@@ -87,15 +86,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O usuário deve conseguir fazer cadastro e login no aplicativo.  | ALTA | 
+|RF-002| O instrutor da academia deve cadastrar os horários disponíveis para treino.   | ALTA |
+|RF-003| O instrutor deve cadastrar a lotação máxima por horário.    | ALTA |
+|RF-004| O usuário deve conseguir fazer o checkpoint para o treino, em determinado horário, caso esse não esteja com lotação máxima.      | ALTA |
+|RF-005| O usuário deve conseguir visualizar o histórico de seus treinos.       | MÉDIA |
+|RF-005| O instrutor deve divulgar o relatório de avaliação física dos seus usuários.       | MÉDIA |
+|RF-005| O usuário deve conseguir visualizar o seu relatório de avaliação física.        | MÉDIA |
+
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| O app deve ser acessível através de sistemas operacionais “Android” e “iOS”.  | ALTA | 
+|RNF-002| O app deve ser desenvolvido utilizando React Native. | ALTA | 
+|RNF-003| O app deve criptografar dados sensíveis do usuário.  | ALTA | 
+|RNF-004| O app deve estar disponível 24 horas por dia e 07 dias da semana.  | MÉDIA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
