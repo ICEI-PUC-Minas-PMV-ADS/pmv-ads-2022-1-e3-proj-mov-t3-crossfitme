@@ -1,7 +1,10 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Conforme uma pesquisa anual realizada no ano de 2020, pela ACSM (American College of Sports Medicine), uma das mais respeitadas instituições de medicina do esporte e educação física em todo mundo, a perda de peso e a busca por um estilo de vida saudável são os principais motivos para a prática esportiva no Brasil.  
 
+O CrossFit, uma das principais tendências fitness da atualidade, é uma adaptação intensiva dos treinos funcionais, realizada em aulas com duração média de uma hora, em diversos horários e níveis de intensidade, tornando-a bem flexível para seus praticantes. 		Além disso, o custo para se abrir uma unidade é bem menor do que o custo para abrir uma academia convencional, já que não é necessária a compra de equipamentos caros, como esteiras, bicicletas e outros que compõem essas academias. Devido a isso, é possível perceber o surgimento de novas unidades de CrossFit, principalmente nas capitais. 
+
+Para que uma nova unidade possa se destacar no mercado ela precisa ter algum diferencial, por isso, será desenvolvido um aplicativo que possa agregar valor à empresa disponibilizando funcionalidades úteis aos clientes e também aos colaboradores. 
 ## Problema
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
