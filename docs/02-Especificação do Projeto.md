@@ -133,7 +133,7 @@ Dessa forma os alunos e instrutores (atores primários) podem interagir com o si
 A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
 
 
-![Exemplo de matriz de rastreabilidade](img/MatrizRastreabilidadeCrossfitme.png)
+![Exemplo de matriz de rastreabilidade](img/MatrizRastreabilidadeCrossfitme.PNG)
 
 
 
