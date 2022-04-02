@@ -19,15 +19,15 @@ O objetivo geral é a criação de uma aplicação móvel que mostre a disponibi
 
 Como objetivos específicos, podemos ressaltar: 
 
-Identificar os alunos e colaboradores por meio de cadastro; 
+> - Identificar os alunos e colaboradores por meio de cadastro; 
 
-Inserir datas e horários de aulas; 
+> - Inserir datas e horários de aulas; 
 
-Mostrar e/ou limitar a quantidade de alunos por aula; 
+> - Mostrar e/ou limitar a quantidade de alunos por aula; 
 
-Permitir que um colaborador faça o registro das avaliações físicas; 
+> - Permitir que um colaborador faça o registro das avaliações físicas; 
 
-Permitir que o aluno visualize suas avaliações físicas; 
+> - Permitir que o aluno visualize suas avaliações físicas; 
  
 > **Links Úteis**:
 > - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
