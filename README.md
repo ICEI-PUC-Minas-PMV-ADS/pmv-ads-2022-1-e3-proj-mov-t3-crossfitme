@@ -6,7 +6,7 @@
 
 `3° SEMESTRE`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O presente projeto busca agregar tecnologia com o bem estar físico. O aplicativo permite que usuários (alunos) consigam confirmar presença em treinos de crossfit disponibilizados por instrutores. 
 
 ## Integrantes
 
