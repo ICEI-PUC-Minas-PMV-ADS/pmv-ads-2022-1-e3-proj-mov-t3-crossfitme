@@ -2,6 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
+A definição do problema e os pontos mais relevantes abordados no projeto foi consolidada com a participação dos usuários em um trabalho de imersão feito pelos membros da equipe a partir da observação dos usuários em seu local natural e por meio de entrevistas. 
 Segue abaixo, todos os detalhes que especificam a abordagem do projeto...
 
 ## Personas
@@ -40,15 +41,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |--------------------|------------------------------------|----------------------------------------|
 |Weruska Aparecida   | Praticar atividade física de alta intensidade em uma academia de CrossFit         | Definir o corpo  |
 |Maria Eduarda        | Realizar atividades físicas dinâmicas em uma academia de CrossFit                   | Emagrecimento |
+|José Maria         | Treinar 3 vezes na semana em uma academia de CrossFit                   | Aumento de resistência e força física |
+|Gustavo Henrique        | Fazer o lançamento do aplicativo da sua academia de CrossFit                   | Facilitar a vida de seus funcionários e clientes |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Modelagem do Processo de Negócio 
 
