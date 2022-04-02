@@ -6,7 +6,7 @@ Segue abaixo, todos os detalhes que especificam a abordagem do projeto...
 
 ## Personas
 
-Weruska Aparecida 
+ <center> Weruska Aparecida  <center>
  
 
 Weruska tem 20 anos, namora há 4 anos com Leonardo e mora em Divinópolis-Mg. Atualmente está no 7º período da faculdade de Fisioterapia a noite e trabalha como estagiária de 08:00 às 13:00 de segunda a sexta-feira. Como ela tem uma vida muito corrida, aonde é complicado conciliar os estudos e o trabalho, ela está procurando uma atividade física de no máximo 1 hora com alta intensidade para definir o seu corpo e vê essa oportunidade praticando CrossFit. Mas ela não quer ter horário marcado para realizar essa atividade e procura uma academia de CrossFit com diversos horários para realizar a aula e que possui um aplicativo para fazer o agendamento, assim não corre o risco de chegar no local e estar cheio. 
