@@ -25,8 +25,6 @@ Como objetivos específicos, podemos ressaltar:
 
  - Permitir que o aluno visualize suas avaliações físicas; 
  
- **Links Úteis**:
-> -
 
 ## Justificativa
 
