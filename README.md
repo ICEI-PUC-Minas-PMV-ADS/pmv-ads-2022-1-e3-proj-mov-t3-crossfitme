@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# CrossFitMe
 
 `Análise e desenvolvimento de Sistemas`
 
@@ -11,14 +11,14 @@ Além de permitir que os treinadores possam avaliar seus devidos alunos, divulga
 
 ## Integrantes
 
-* Igor Vicente Machado  
-* Jean Stefan dos Santos Lima 
-* Leandro Ângelo Scardoelli  
-* Leonardo Barbosa Ferreira 
+-   Igor Vicente Machado
+-   Jean Stefan dos Santos Lima
+-   Leandro Ângelo Scardoelli
+-   Leonardo Barbosa Ferreira
 
 ## Orientador
 
-* Mateus Curcino de Lima
+-   Mateus Curcino de Lima
 
 ## Instruções de utilização
 
