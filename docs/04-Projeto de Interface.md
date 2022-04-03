@@ -33,19 +33,19 @@ Nas imagens abaixo, se encontra o resultado final esperado das telas do aplicati
 
 ### Login
 
-![Tela de Login](img/Tela_Login.png)
+![Tela de Login](img/telas/Login.png)
 
 ### Perfil
 
-![Tela de Perfil](img/Tela_Perfil.png)
+![Tela de Perfil](img/telas/Perfil.png)
 
 ### Aulas
 
-![Tela de Aulas](img/Tela_Aulas.png)
+![Tela de Aulas](img/telas/Aula.png)
 
 ### Avaliação Física
 
-![Tela de Avaliação Física](img/Tela_Avaliacao.png)
+![Tela de Avaliação Física](img/telas/Relatorio.png)
 
 > **Link**:
 >
