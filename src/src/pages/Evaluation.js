@@ -4,13 +4,6 @@ import FloatingIcon from '../components/FloatingIcon';
 import ProfileCard from '../components/ProfileCard';
 import EvaluationCard from '../components/EvaluationCard';
 
-const styles = StyleSheet.create({
-    container: {
-        marginHorizontal: 20,
-        marginTop: 15,
-    },
-});
-
 const Evaluation = () => {
     return (
         <View style={styles.container}>
@@ -41,3 +34,10 @@ const Evaluation = () => {
 };
 
 export default Evaluation;
+
+const styles = StyleSheet.create({
+    container: {
+        marginHorizontal: 20,
+        marginTop: 15,
+    },
+});

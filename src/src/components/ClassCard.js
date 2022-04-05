@@ -3,6 +3,36 @@ import {StyleSheet, View} from 'react-native';
 import FloatingIcon from './FloatingIcon';
 import Button_ from './Button_';
 
+const ClassCard = (props) => (
+    <Card style={styles.card}>
+        <View style={{margin: 15}}>
+            <View
+                style={{
+                    ...styles.row,
+                    justifyContent: 'space-between',
+                }}
+            >
+                <View style={styles.row}>
+                    <FloatingIcon name={'clock-outline'} />
+                    <Text style={styles.textIcon}>{props.time}</Text>
+                </View>
+                <View style={styles.row}>
+                    <FloatingIcon name={'account-multiple-outline'} />
+                    <Text style={styles.textIcon}>{props.qtd}</Text>
+                </View>
+            </View>
+            <View>
+                <Text style={styles.cardText}>{props.children}</Text>
+            </View>
+            <View style={{marginBottom: 15}}>
+                <Button_>Fazer check-in</Button_>
+            </View>
+        </View>
+    </Card>
+);
+
+export default ClassCard;
+
 const styles = StyleSheet.create({
     card: {
         flexBasis: 'auto',
@@ -32,33 +62,3 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
 });
-
-const ProfileCard = (props) => (
-    <Card style={styles.card}>
-        <View style={{margin: 15}}>
-            <View
-                style={{
-                    ...styles.row,
-                    justifyContent: 'space-between',
-                }}
-            >
-                <View style={styles.row}>
-                    <FloatingIcon name={'clock-outline'} />
-                    <Text style={styles.textIcon}>{props.time}</Text>
-                </View>
-                <View style={styles.row}>
-                    <FloatingIcon name={'account-multiple-outline'} />
-                    <Text style={styles.textIcon}>{props.qtd}</Text>
-                </View>
-            </View>
-            <View>
-                <Text style={styles.cardText}>{props.children}</Text>
-            </View>
-            <View style={{marginBottom: 15}}>
-                <Button_>Fazer check-in</Button_>
-            </View>
-        </View>
-    </Card>
-);
-
-export default ProfileCard;

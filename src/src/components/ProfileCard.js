@@ -1,20 +1,6 @@
 import {Avatar, Card} from 'react-native-paper';
 import {StyleSheet} from 'react-native';
 
-const styles = StyleSheet.create({
-    card: {
-        backgroundColor: '#ffffff',
-        height: 90,
-        flexDirection: 'row',
-        alignItems: 'center',
-        borderRadius: 8,
-    },
-    cardTitle: {
-        alignSelf: 'center',
-        fontSize: 24,
-    },
-});
-
 const ProfileCard = (props) => (
     <Card style={styles.card}>
         <Card.Title
@@ -32,3 +18,17 @@ const ProfileCard = (props) => (
 );
 
 export default ProfileCard;
+
+const styles = StyleSheet.create({
+    card: {
+        backgroundColor: '#ffffff',
+        height: 90,
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderRadius: 8,
+    },
+    cardTitle: {
+        alignSelf: 'center',
+        fontSize: 24,
+    },
+});

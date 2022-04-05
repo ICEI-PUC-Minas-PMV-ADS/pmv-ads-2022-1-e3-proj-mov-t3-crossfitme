@@ -6,12 +6,6 @@ import Schedule from '../pages/Schedule.js';
 import Profile from '../pages/Profile.js';
 import Evaluation from '../pages/Evaluation.js';
 
-const styles = StyleSheet.create({
-    navigation: {
-        backgroundColor: '#000000',
-    },
-});
-
 const Navigation = () => {
     const [index, setIndex] = React.useState(1);
     const [routes] = React.useState([
@@ -50,3 +44,9 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
+const styles = StyleSheet.create({
+    navigation: {
+        backgroundColor: '#000000',
+    },
+});

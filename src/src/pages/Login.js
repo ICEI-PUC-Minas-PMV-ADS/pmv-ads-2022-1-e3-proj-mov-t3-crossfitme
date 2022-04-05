@@ -4,29 +4,6 @@ import {View, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Button_ from '../components/Button_';
 
-const styles = StyleSheet.create({
-    container: {
-        justifyContent: 'center',
-        flex: 1,
-        margin: 30,
-    },
-    title: {
-        fontFamily: 'Poppins-SemiBold',
-        fontSize: 46,
-        textAlign: 'center',
-        marginBottom: 30,
-    },
-    input: {
-        backgroundColor: '#eeeeee',
-        height: 50,
-        marginBottom: 15,
-    },
-    button: {
-        alignItems: 'center',
-        marginBottom: 30,
-    },
-});
-
 const Login = () => {
     const navigation = useNavigation();
     const [email, setEmail] = React.useState('');
@@ -89,3 +66,26 @@ const Login = () => {
 };
 
 export default Login;
+
+const styles = StyleSheet.create({
+    container: {
+        justifyContent: 'center',
+        flex: 1,
+        margin: 30,
+    },
+    title: {
+        fontFamily: 'Poppins-SemiBold',
+        fontSize: 46,
+        textAlign: 'center',
+        marginBottom: 30,
+    },
+    input: {
+        backgroundColor: '#eeeeee',
+        height: 50,
+        marginBottom: 15,
+    },
+    button: {
+        alignItems: 'center',
+        marginBottom: 30,
+    },
+});
