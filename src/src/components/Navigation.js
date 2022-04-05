@@ -2,34 +2,34 @@ import * as React from 'react';
 import {BottomNavigation} from 'react-native-paper';
 import {StyleSheet} from 'react-native';
 
-import Schedule from '../pages/Schedule.js';
-import Profile from '../pages/Profile.js';
-import Evaluation from '../pages/Evaluation.js';
+import Aulas from '../pages/Aulas.js';
+import Perfil from '../pages/Perfil.js';
+import Avaliacao from '../pages/Avaliacao.js';
 
 const Navigation = () => {
     const [index, setIndex] = React.useState(1);
     const [routes] = React.useState([
         {
-            key: 'schedule',
+            key: 'aulas',
             title: 'Aulas',
             icon: 'calendar-month',
         },
         {
-            key: 'profile',
+            key: 'perfil',
             title: 'Perfil',
             icon: 'account-circle',
         },
         {
-            key: 'evaluation',
+            key: 'avaliacao',
             title: 'Avaliações',
             icon: 'chart-timeline-variant',
         },
     ]);
 
     const renderScene = BottomNavigation.SceneMap({
-        schedule: Schedule,
-        profile: Profile,
-        evaluation: Evaluation,
+        aulas: Aulas,
+        perfil: Perfil,
+        avaliacao: Avaliacao,
     });
 
     return (

@@ -4,7 +4,7 @@ import FloatingIcon from '../components/FloatingIcon';
 import ProfileCard from '../components/ProfileCard';
 import EvaluationCard from '../components/EvaluationCard';
 
-const Evaluation = () => {
+const Avaliacao = () => {
     return (
         <View style={styles.container}>
             <View style={{marginBottom: 15}}>
@@ -33,7 +33,7 @@ const Evaluation = () => {
     );
 };
 
-export default Evaluation;
+export default Avaliacao;
 
 const styles = StyleSheet.create({
     container: {

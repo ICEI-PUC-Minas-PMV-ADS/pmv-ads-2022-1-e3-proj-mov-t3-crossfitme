@@ -4,7 +4,7 @@ import AppTheme from './src/components/AppTheme';
 import {NavigationContainer} from '@react-navigation/native';
 
 import Header from './src/components/Header';
-import StackNavigator from './src/components/StackNavigator';
+import StackNavigator from './src/navigations/StackNavigator';
 
 const App = () => {
     return (

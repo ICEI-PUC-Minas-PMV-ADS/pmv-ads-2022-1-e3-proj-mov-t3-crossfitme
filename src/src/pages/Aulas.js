@@ -1,4 +1,4 @@
-import {View, StyleSheet, ScrollView, FlatList} from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 import {Text} from 'react-native-paper';
 import ProfileCard from '../components/ProfileCard';
 import FloatingIcon from '../components/FloatingIcon';
@@ -40,7 +40,7 @@ const renderItem = ({item}) => (
     </ClassCard>
 );
 
-const Schedule = () => {
+const Aulas = () => {
     return (
         <View style={styles.container}>
             <View style={{marginBottom: 15}}>
@@ -74,7 +74,7 @@ const Schedule = () => {
     );
 };
 
-export default Schedule;
+export default Aulas;
 
 const styles = StyleSheet.create({
     container: {

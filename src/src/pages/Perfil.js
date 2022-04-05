@@ -5,7 +5,7 @@ import ProfileImage from '../components/ProfileImage';
 
 const texts = {Idade: 30, Altura: '1,80', Peso: 80};
 
-const Profile = () => {
+const Perfil = () => {
     return (
         <Container>
             <View style={styles.profileContainer}>
@@ -41,7 +41,7 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default Perfil;
 
 const styles = StyleSheet.create({
     profileContainer: {
