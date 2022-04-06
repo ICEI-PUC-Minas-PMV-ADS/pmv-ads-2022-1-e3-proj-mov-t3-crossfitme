@@ -77,8 +77,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Poppins-SemiBold',
         fontSize: 46,
         textAlign: 'center',
-        marginBottom: 30,
-        marginTop: 100,
+        marginTop: 30,
+        flex: 1,
     },
     subtitle: {
         fontSize: 30,
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     inputContainer: {
-        flex: 1,
+        flex: 3,
         justifyContent: 'center',
     },
     button: {

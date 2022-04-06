@@ -3,6 +3,7 @@ import {Text} from 'react-native-paper';
 import {View, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Button_ from '../components/Button_';
+import TextButton from '../components/TextButton';
 import Input from '../components/Input';
 
 const Login = () => {
@@ -40,19 +41,15 @@ const Login = () => {
                 style={{
                     flexDirection: 'row',
                     justifyContent: 'center',
+                    alignItems: 'center',
                 }}
             >
                 <Text style={{marginRight: 5, fontSize: 16}}>
                     Não tem uma conta?
                 </Text>
-                <Text
-                    style={{
-                        fontFamily: 'Poppins-SemiBold',
-                        fontSize: 16,
-                    }}
-                >
+                <TextButton onPress={() => navigation.navigate('Cadastro')}>
                     Cadastre-se
-                </Text>
+                </TextButton>
             </View>
         </View>
     );
