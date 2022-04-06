@@ -1,33 +1,26 @@
 import * as React from 'react';
-import {Text, TextInput} from 'react-native-paper';
+import {Text} from 'react-native-paper';
 import {View, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Button_ from '../components/Button_';
+import Input from '../components/Input';
 
 const Login = () => {
     const navigation = useNavigation();
     const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const [senha, setSenha] = React.useState('');
     return (
         <View style={styles.container}>
             <Text style={styles.title}>CrossFitMe</Text>
-            <TextInput
-                mode='outlined'
-                outlineColor='#fafafa'
-                activeOutlineColor='#747474'
+            <Input
                 label='E-mail'
                 value={email}
-                onChangeText={(email) => setEmail(email)}
-                style={styles.input}
+                onChangeText={(text) => setEmail(text)}
             />
-            <TextInput
-                mode='outlined'
-                outlineColor='#fafafa'
-                activeOutlineColor='#747474'
+            <Input
                 label='Senha'
-                value={password}
-                onChangeText={(password) => setPassword(password)}
-                style={styles.input}
+                value={senha}
+                onChangeText={(text) => setSenha(text)}
             />
             <View style={styles.button}>
                 <Button_ onPress={() => navigation.navigate('Navigation')}>
@@ -79,13 +72,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 30,
     },
-    input: {
-        backgroundColor: '#eeeeee',
-        height: 50,
-        marginBottom: 15,
-    },
     button: {
         alignItems: 'center',
+        marginTop: 15,
         marginBottom: 30,
     },
 });
