@@ -8,10 +8,31 @@ const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
     return (
-        <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Navigator
+            screenOptions={{
+                title: 'CrossFitMe',
+                statusBarStyle: 'auto',
+                statusBarHidden: true,
+                headerStyle: {backgroundColor: '#000'},
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                    fontSize: 24,
+                },
+                headerBackVisible: false,
+            }}
+        >
             <Stack.Group>
-                <Stack.Screen name='Login' component={Login} />
-                <Stack.Screen name='Cadastro' component={Cadastro} />
+                <Stack.Screen
+                    name='Login'
+                    component={Login}
+                    options={{headerShown: false}}
+                />
+                <Stack.Screen
+                    name='Cadastro'
+                    component={Cadastro}
+                    options={{headerShown: false}}
+                />
                 <Stack.Screen name='Navigation' component={Navigation} />
             </Stack.Group>
         </Stack.Navigator>
