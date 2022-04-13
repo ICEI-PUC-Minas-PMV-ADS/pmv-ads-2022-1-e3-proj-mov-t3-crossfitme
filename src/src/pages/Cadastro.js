@@ -38,7 +38,7 @@ const Login = () => {
                 <Input
                     label='Senha'
                     value={senha}
-                    onChangeText={(text) => setPassword(text)}
+                    onChangeText={(text) => setSenha(text)}
                 />
                 <View style={styles.button}>
                     <Button_>Cadastrar</Button_>
@@ -50,7 +50,7 @@ const Login = () => {
                     }}
                 >
                     <Text style={{marginRight: 5, fontSize: 16}}>
-                        Já possuí uma conta?
+                        Já possui uma conta?
                     </Text>
                     <Text
                         style={{
@@ -72,13 +72,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         margin: 30,
+        justifyContent: 'center',
     },
     title: {
         fontFamily: 'Poppins-SemiBold',
         fontSize: 46,
         textAlign: 'center',
-        marginTop: 30,
-        flex: 1,
+        marginBottom: 60,
+        marginTop: 60,
     },
     subtitle: {
         fontSize: 30,
@@ -86,12 +87,12 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     inputContainer: {
-        flex: 3,
         justifyContent: 'center',
+        flex: 1,
     },
     button: {
         alignItems: 'center',
-        marginTop: 15,
+        marginTop: 30,
         marginBottom: 30,
     },
 });
