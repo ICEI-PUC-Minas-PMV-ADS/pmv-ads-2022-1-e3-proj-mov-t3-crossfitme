@@ -1,20 +1,21 @@
-import * as React from 'react';
+import React from 'react';
 import AppTheme from './src/components/AppTheme';
-import {NavigationContainer} from '@react-navigation/native';
-
-import StackNavigator from './src/navigations/StackNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import UserProvider from './src/contexts/UserContext';
+import Rotas from './src/navigations/Rotas';
 
 const App = () => {
-    const login = true;
-    if (login) {
-        return (
-            <AppTheme>
+
+    return (
+        <AppTheme>
+            <UserProvider>
                 <NavigationContainer>
-                    <StackNavigator />
+                    <Rotas />
                 </NavigationContainer>
-            </AppTheme>
-        );
-    }
+            </UserProvider>
+        </AppTheme>
+    );
+
 };
 
 export default App;

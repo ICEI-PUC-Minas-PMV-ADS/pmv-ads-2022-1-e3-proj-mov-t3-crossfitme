@@ -1,5 +1,6 @@
-import API from "../services/Webapi.services.js";
-import { BASE_URL } from "../services/Urls.js";
+import API from '../services/Webapi.services';
+import { BASE_URL } from '../services/Urls';
+
 
 export const register = async (param) => {
     try{

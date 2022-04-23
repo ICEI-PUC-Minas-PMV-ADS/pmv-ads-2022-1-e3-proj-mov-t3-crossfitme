@@ -1,14 +1,16 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Navigation from '../components/Navigation';
-import Login from '../pages/Login';
-import Cadastro from '../pages/Cadastro';
+import Perfil from '../pages/Perfil';
+import Aulas from '../pages/Aulas';
+import Avaliacao from '../pages/Avaliacao';
+import Home from '../pages/Home';
 
 const Stack = createNativeStackNavigator();
 
-const StackNavigator = () => {
+const Utilizacao = () => {
     return (
         <Stack.Navigator
+            initialRouteName='Home'
             screenOptions={{
                 title: 'CrossFitMe',
                 statusBarStyle: 'auto',
@@ -22,21 +24,30 @@ const StackNavigator = () => {
                 headerBackVisible: false,
             }}
         >
-            <Stack.Group>
+             <Stack.Screen
+                    name='Home'
+                    component={Home}
+                    options={{headerShown: false}}
+                />
+            
                 <Stack.Screen
-                    name='Login'
-                    component={Login}
+                    name='Perfil'
+                    component={Perfil}
                     options={{headerShown: false}}
                 />
                 <Stack.Screen
-                    name='Cadastro'
-                    component={Cadastro}
+                    name='Aulas'
+                    component={Aulas}
                     options={{headerShown: false}}
                 />
-                <Stack.Screen name='Navigation' component={Navigation} />
-            </Stack.Group>
+                <Stack.Screen 
+                name='Avaliacao' 
+                component={Avaliacao} />
+
+
+          
         </Stack.Navigator>
     );
 };
 
-export default StackNavigator;
+export default Utilizacao;

@@ -4,9 +4,11 @@ import {View, StyleSheet, Alert} from 'react-native';
 import Button_ from '../components/Button_';
 import Input from '../components/Input';
 import { register } from '../services/Auth.service';
+import { useNavigation } from '@react-navigation/native';
 
 
 const Cadastro = () => {
+    const navigation = useNavigation();
     const [nome, setNome] = useState('');
     const [nascimento, setNascimento] = useState('');
     const [endereco, setEndereco] = useState('');
@@ -27,11 +29,13 @@ const Cadastro = () => {
     
           if (res) {
     
-            Alert.alert('Atenção', 'Usuário Cadastrado com sucesso!')
+            Alert.alert('Atenção', 'Usuário Cadastrado com sucesso!', [
+                { text: "OK", onPress: () => navigation.goBack() }
+              ]);
     
           } else {
     
-            Alert.alert('Atenção', 'Usuário não cadastrado! Tente novamente mais tarde =D');
+            Alert.alert('Atenção', 'Usuário não cadastrado!');
           }
     
         });
@@ -86,6 +90,7 @@ const Cadastro = () => {
                             fontFamily: 'Poppins-SemiBold',
                             fontSize: 16,
                         }}
+                        onPress = {() => navigation.goBack()}
                     >
                         Fazer login
                     </Text>
