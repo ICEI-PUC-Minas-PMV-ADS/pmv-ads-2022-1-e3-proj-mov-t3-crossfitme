@@ -9,7 +9,9 @@ const Input = (props) => {
             outlineColor='#fafafa'
             activeOutlineColor='#747474'
             label={props.label}
-            style={styles.input}
+            style={(styles.input, props.style)}
+            multiline={props.multiline}
+            onChangeText={props.onChangeText}
         />
     );
 };
@@ -19,7 +21,6 @@ export default Input;
 const styles = StyleSheet.create({
     input: {
         backgroundColor: '#eeeeee',
-        height: 50,
         marginBottom: 15,
     },
 });
