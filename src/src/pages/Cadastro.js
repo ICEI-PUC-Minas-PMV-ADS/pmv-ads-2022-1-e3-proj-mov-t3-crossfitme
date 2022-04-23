@@ -16,26 +16,31 @@ const Login = () => {
             <View style={styles.inputContainer}>
                 <Text style={styles.subtitle}>Cadastro</Text>
                 <Input
+                    style={{height: 50}}
                     label='Nome'
                     value={nome}
                     onChangeText={(text) => setNome(text)}
                 />
                 <Input
+                    style={{height: 50}}
                     label='Data de Nascimento'
                     value={nascimento}
                     onChangeText={(text) => setNascimento(text)}
                 />
                 <Input
+                    style={{height: 50}}
                     label='Endereço'
                     value={endereco}
                     onChangeText={(text) => setEndereco(text)}
                 />
                 <Input
+                    style={{height: 50}}
                     label='E-mail'
                     value={email}
                     onChangeText={(text) => setEmail(text)}
                 />
                 <Input
+                    style={{height: 50}}
                     label='Senha'
                     value={senha}
                     onChangeText={(text) => setSenha(text)}
