@@ -1,46 +1,31 @@
+import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 import {Text} from 'react-native-paper';
 import ProfileCard from '../components/ProfileCard';
 import FloatingIcon from '../components/FloatingIcon';
 import ClassCard from '../components/ClassCard';
-
-const DATA = [
-    {
-        id: 1,
-        qtd: '8/10',
-        time: '13:30',
-        description: 'Aula funcional com o professor Rodrigo Silva.',
-    },
-    {
-        id: 2,
-        qtd: '10/10',
-        time: '16:30',
-        description:
-            'Aula funcional com a professora Carolina Duarte. 30 minutos de exercícios indoor e 30 minutos de corrida ao ar livre.',
-    },
-    {
-        id: 3,
-        qtd: '5/10',
-        time: '18:30',
-        description:
-            'Aula funcional com a professora Ricardo Andrade. Empurrar pneus de caminhão e escalada na corda.',
-    },
-    {
-        id: 4,
-        qtd: '0/10',
-        time: '20:30',
-        description:
-            'Aula funcional com a professora Rodrigo Silva. Levantamento de peso.',
-    },
-];
-
-const renderItem = ({item}) => (
-    <ClassCard qtd={item.qtd} time={item.time}>
-        {item.description}
-    </ClassCard>
-);
+import {useNavigation} from '@react-navigation/native';
+import {getAulas} from '../services/CrossFitMeServicesDB';
+import Button_ from '../components/Button_';
+import {useIsFocused} from '@react-navigation/native';
 
 const Aulas = () => {
+    const navigation = useNavigation();
+    const isFocused = useIsFocused();
+
+    const [aula, setAula] = useState([]);
+
+    useEffect(() => {
+        getAulas().then((dados) => {
+            setAula(dados);
+        });
+    }, [isFocused]);
+
+    const renderItem = ({item}) => (
+        <ClassCard qtd={'/' + item.qtd} time={item.hora}>
+            {item.descricao}
+        </ClassCard>
+    );
     return (
         <View style={styles.container}>
             <View style={{marginBottom: 15}}>
@@ -64,17 +49,18 @@ const Aulas = () => {
             </View>
             <View style={styles.flatList}>
                 <FlatList
-                    data={DATA}
+                    data={aula}
                     renderItem={renderItem}
                     keyExtractor={(item) => item.id}
                     showsVerticalScrollIndicator={false}
                 />
             </View>
+            <Button_ onPress={() => navigation.navigate('CadastroAula')}>
+                Cadastrar
+            </Button_>
         </View>
     );
 };
-
-export default Aulas;
 
 const styles = StyleSheet.create({
     container: {
@@ -88,3 +74,4 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+export default Aulas;
