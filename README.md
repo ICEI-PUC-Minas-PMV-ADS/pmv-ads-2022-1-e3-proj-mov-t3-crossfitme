@@ -20,7 +20,7 @@ Além de permitir que os treinadores possam avaliar seus devidos alunos, divulga
 
 -   Mateus Curcino de Lima
 
-## Instruções de utilização
+## Instruções de Utilização
 
 - Faça o download do projeto, ou, utilize o comando: 
 [ `git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e3-proj-mov-t3-crossfitme.git` ] no diretório de seu interesse. 
