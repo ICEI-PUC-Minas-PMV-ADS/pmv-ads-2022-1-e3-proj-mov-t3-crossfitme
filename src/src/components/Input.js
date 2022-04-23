@@ -1,21 +1,19 @@
-import * as React from 'react';
-import {StyleSheet} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { TextInput } from 'react-native-paper';
 
 const Input = (props) => {
-    return (
+
+  return (
+
         <TextInput
-            mode='outlined'
-            outlineColor='#fafafa'
-            activeOutlineColor='#747474'
-            label={props.label}
-            style={styles.input}
+          style={styles.input}
+         // keyboardType = {'decimal-pad'}
+          {...props}          
         />
-    );
-};
 
-export default Input;
-
+  );
+}
 const styles = StyleSheet.create({
     input: {
         backgroundColor: '#eeeeee',
@@ -23,3 +21,31 @@ const styles = StyleSheet.create({
         marginBottom: 15,
     },
 });
+
+export default Input;
+
+// import * as React from 'react';
+// import {StyleSheet} from 'react-native';
+// import {TextInput} from 'react-native-paper';
+
+// const Input = (props) => {
+//     return (
+//         <TextInput
+//             mode='outlined'
+//             outlineColor='#fafafa'
+//             activeOutlineColor='#747474'
+//             label={props.label}
+//             style={styles.input}
+//         />
+//     );
+// };
+
+// export default Input;
+
+// const styles = StyleSheet.create({
+//     input: {
+//         backgroundColor: '#eeeeee',
+//         height: 50,
+//         marginBottom: 15,
+//     },
+// });

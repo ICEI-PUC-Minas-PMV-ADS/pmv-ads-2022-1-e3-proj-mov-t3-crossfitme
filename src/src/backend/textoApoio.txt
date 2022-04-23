@@ -1,0 +1,24 @@
+adicionar as bibliotecas do json: 
+
+npm install -g json-server
+npm install -g json-server-auth
+
+Executar o comando : [ json-server-auth db.json ]
+
+adicionar axios :
+
+npm install axios
+
+Executar o comando : [ lt --port 3000 ]
+
+
+json-server-auth db.json : inicializa a conexão com o db fake, exibindo as portas de acesso 
+[ comando a ser executado no diretório em que se encontra o banco de dados, 
+neste caso a pasta : 'backend' ]
+
+após inicializar a conexão com db fake [do json server], utilize o comando :
+lt --port 3000 > para gerar url [comando a ser executado no diretório raiz]
+
+Importante: copiar a url gerada para Urls.js em CALCPUC/services/Urls.js 
+
+

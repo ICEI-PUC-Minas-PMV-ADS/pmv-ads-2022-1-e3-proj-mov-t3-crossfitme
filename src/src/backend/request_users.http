@@ -1,0 +1,24 @@
+###GET GASTOS
+GET http://localhost:3000/users HTTP/1.1
+
+###CREATE
+POST  http://localhost:3000/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Ana",
+    "email": "ana2@gmail.com",
+    "password": "12345",
+    "rule": "admin", 
+    "endereco": "rua morteiro, 351",
+    "nascimento": "14-12-1999"
+}
+
+###LOGIN
+POST http://localhost:3000/login HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "12345"
+}

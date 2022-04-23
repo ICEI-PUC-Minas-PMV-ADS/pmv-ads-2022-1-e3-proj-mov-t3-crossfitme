@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://sharp-puma-83.loca.lt';

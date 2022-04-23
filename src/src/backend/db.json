@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "email": "ana2@gmail.com",
+      "password": "$2a$10$vVFARznywxWIrrNeQdFP3u5538uuBYEiVGALIKBLgnZRBOQI8Q2MW",
+      "name": "Ana",
+      "rule": "admin",
+      "endereco": "rua morteiro, 351",
+      "nascimento": "14-12-1999",
+      "id": 1
+    }
+  ],
+  "aulas": [],
+  "relatorioFisico": []
+}

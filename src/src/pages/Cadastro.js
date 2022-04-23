@@ -1,17 +1,45 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {Text} from 'react-native-paper';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Alert} from 'react-native';
 import Button_ from '../components/Button_';
 import Input from '../components/Input';
+import { register } from '../services/Auth.service';
 
-const Login = () => {
-    const [nome, setNome] = React.useState('');
-    const [nascimento, setNascimento] = React.useState('');
-    const [endereco, setEndereco] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [senha, setSenha] = React.useState('');
+
+const Cadastro = () => {
+    const [nome, setNome] = useState('');
+    const [nascimento, setNascimento] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+
+    const handleRegister = () => {
+        register({
+            name: nome,
+            email: email,
+            password: senha,
+            rule: "aluno", 
+            endereco: endereco,
+            nascimento: nascimento
+
+        }).then(res => {
+          console.log(res);
+    
+          if (res) {
+    
+            Alert.alert('Atenção', 'Usuário Cadastrado com sucesso!')
+    
+          } else {
+    
+            Alert.alert('Atenção', 'Usuário não cadastrado! Tente novamente mais tarde =D');
+          }
+    
+        });
+      }
+
     return (
         <View style={styles.container}>
+         
             <Text style={styles.title}>CrossFitMe</Text>
             <View style={styles.inputContainer}>
                 <Text style={styles.subtitle}>Cadastro</Text>
@@ -19,6 +47,7 @@ const Login = () => {
                     label='Nome'
                     value={nome}
                     onChangeText={(text) => setNome(text)}
+                    
                 />
                 <Input
                     label='Data de Nascimento'
@@ -41,7 +70,7 @@ const Login = () => {
                     onChangeText={(text) => setSenha(text)}
                 />
                 <View style={styles.button}>
-                    <Button_>Cadastrar</Button_>
+                    <Button_ onPress = { handleRegister }>Cadastrar</Button_>
                 </View>
                 <View
                     style={{
@@ -66,7 +95,7 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Cadastro;
 
 const styles = StyleSheet.create({
     container: {
