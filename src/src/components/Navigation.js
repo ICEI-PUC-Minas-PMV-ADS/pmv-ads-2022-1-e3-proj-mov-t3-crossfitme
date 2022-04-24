@@ -4,7 +4,7 @@ import {StyleSheet} from 'react-native';
 
 import Aulas from '../pages/Aulas.js';
 import Perfil from '../pages/Perfil.js';
-import Avaliacao from '../pages/Avaliacao.js';
+import Avaliacoes from '../pages/Avaliacoes.js';
 
 const Navigation = () => {
     const [index, setIndex] = React.useState(1);
@@ -20,7 +20,7 @@ const Navigation = () => {
             icon: 'account-circle',
         },
         {
-            key: 'avaliacao',
+            key: 'avaliacoes',
             title: 'Avaliações',
             icon: 'chart-timeline-variant',
         },
@@ -29,7 +29,7 @@ const Navigation = () => {
     const renderScene = BottomNavigation.SceneMap({
         aulas: Aulas,
         perfil: Perfil,
-        avaliacao: Avaliacao,
+        avaliacoes: Avaliacoes,
     });
 
     return (
