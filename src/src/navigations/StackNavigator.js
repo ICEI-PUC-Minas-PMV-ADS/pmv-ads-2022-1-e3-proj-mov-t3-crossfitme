@@ -1,10 +1,14 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import Navigation from '../components/Navigation';
 import Login from '../pages/Login';
 import Cadastro from '../pages/Cadastro';
 import CadastroAula from '../pages/CadastroAula';
 import Aulas from '../pages/Aulas';
+import Avaliacoes from '../pages/Avaliacoes';
+import CadastroAvaliacao from '../pages/CadastroAvaliacao';
+import RelatorioAvaliacao from '../pages/RelatorioAvaliacao';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,9 +40,18 @@ const StackNavigator = () => {
                     component={Cadastro}
                     options={{headerShown: false}}
                 />
-                <Stack.Screen name='CadastroAula' component={CadastroAula} />
                 <Stack.Screen name='Navigation' component={Navigation} />
                 <Stack.Screen name='Aulas' component={Aulas} />
+                <Stack.Screen name='CadastroAula' component={CadastroAula} />
+                <Stack.Screen name='Avaliacoes' component={Avaliacoes} />
+                <Stack.Screen
+                    name='CadastroAvaliacao'
+                    component={CadastroAvaliacao}
+                />
+                <Stack.Screen
+                    name='RelatorioAvaliacao'
+                    component={RelatorioAvaliacao}
+                />
             </Stack.Group>
         </Stack.Navigator>
     );
