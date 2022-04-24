@@ -1,13 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 import {Text} from 'react-native-paper';
+
 import ProfileCard from '../components/ProfileCard';
 import FloatingIcon from '../components/FloatingIcon';
 import ClassCard from '../components/ClassCard';
+import FloatingButton from '../components/FloatingButton';
+
 import {useNavigation} from '@react-navigation/native';
-import {getAulas} from '../services/CrossFitMeServicesDB';
-import Button_ from '../components/Button_';
 import {useIsFocused} from '@react-navigation/native';
+
+import {getAulas} from '../services/CrossFitMeServicesDB';
 
 const Aulas = () => {
     const navigation = useNavigation();
@@ -28,7 +31,7 @@ const Aulas = () => {
     );
     return (
         <View style={styles.container}>
-            <View style={{marginBottom: 15}}>
+            <View style={{marginBottom: 30}}>
                 <ProfileCard
                     name={'Bruno Souza'}
                     source={require('../../assets/img/profile.jpg')}
@@ -39,7 +42,7 @@ const Aulas = () => {
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginBottom: 15,
+                    marginBottom: 30,
                 }}
             >
                 <FloatingIcon name={'map-marker-outline'} />
@@ -55,9 +58,9 @@ const Aulas = () => {
                     showsVerticalScrollIndicator={false}
                 />
             </View>
-            <Button_ onPress={() => navigation.navigate('CadastroAula')}>
-                Cadastrar
-            </Button_>
+            <FloatingButton
+                onPress={() => navigation.navigate('CadastroAula')}
+            />
         </View>
     );
 };
