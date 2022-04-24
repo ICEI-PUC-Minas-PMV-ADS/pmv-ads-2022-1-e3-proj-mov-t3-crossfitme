@@ -77,7 +77,9 @@ const CadastroAula = ({route}) => {
                 </View>
                 <View style={styles.buttonContainer}>
                     <Button_ onPress={handleSalvar}>Salvar</Button_>
-                    <Button_>Cancelar</Button_>
+                    <Button_ onPress={() => navigation.goBack()}>
+                        Cancelar
+                    </Button_>
                 </View>
             </View>
         </View>
