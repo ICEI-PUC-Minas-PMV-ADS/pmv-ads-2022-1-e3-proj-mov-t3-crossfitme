@@ -20,9 +20,25 @@ Além de permitir que os treinadores possam avaliar seus devidos alunos, divulga
 
 -   Mateus Curcino de Lima
 
-## Instruções de utilização
+## Instruções de Utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+- Faça o download do projeto, ou, utilize o comando: 
+[ `git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e3-proj-mov-t3-crossfitme.git` ] no diretório de seu interesse. 
+
+- Utilizando uma Interface de Linha de Comando (CLI) navegue até o diretório: '...\src' e digite o seguinte comando: 
+[`npm install`] ou [`npm install --legacy-peer-deps`] ATENÇÃO: Necessário que o Node.js esteja instalado em sua máquina. 
+
+- [ `npm install --global expo-cli` ] : Instale o framework <a href="https://docs.expo.dev/get-started/installation/">  Expo </a> (para facilitar no desenvolvimento e execução de aplicações móveis). 
+
+- [ `expo start` ] para executar a aplicação. 
+
+> bibliotecas necessárias: (em caso de erro)
+> npm install @react-navigation/native
+
+
+
+
+
 
 # Documentação
 

@@ -1,15 +1,43 @@
-import * as React from 'react';
-import {Text} from 'react-native-paper';
-import {View, StyleSheet} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import React, { useState } from 'react';
+import { Text } from 'react-native-paper';
+import { View, StyleSheet, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Button_ from '../components/Button_';
 import TextButton from '../components/TextButton';
 import Input from '../components/Input';
+import { login } from '../services/Auth.service';
+import { useUser } from '../contexts/UserContext';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const Login = () => {
+
     const navigation = useNavigation();
-    const [email, setEmail] = React.useState('');
-    const [senha, setSenha] = React.useState('');
+    const { setSigned, setName } = useUser();
+    const [email, setEmail] = useState('');
+    const [password, setSenha] = useState('');
+
+    const handleLogin = () => {
+
+        login({
+            email: email,
+            password: password
+        }).then(res => {
+            console.log(res);
+
+            if (res && res.user) {
+
+                setSigned(true);
+                setName(res.user.name);
+                AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
+            } else {
+
+                Alert.alert('Atenção', 'Usuário ou senha inválidos!');
+            }
+
+        });
+    }
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>CrossFitMe</Text>
@@ -20,12 +48,16 @@ const Login = () => {
             />
             <Input
                 label='Senha'
-                value={senha}
+                secureTextEntry
+                value={password}
                 onChangeText={(text) => setSenha(text)}
             />
             <View style={styles.button}>
-                <Button_ onPress={() => navigation.navigate('Navigation')}>
-                    Entrar
+                <Button_
+                    mode="contained"
+                    onPress={handleLogin}
+                >
+                    LOGIN
                 </Button_>
             </View>
             <Text
@@ -44,7 +76,7 @@ const Login = () => {
                     alignItems: 'center',
                 }}
             >
-                <Text style={{marginRight: 5, fontSize: 16}}>
+                <Text style={{ marginRight: 5, fontSize: 16 }}>
                     Não tem uma conta?
                 </Text>
                 <TextButton onPress={() => navigation.navigate('Cadastro')}>

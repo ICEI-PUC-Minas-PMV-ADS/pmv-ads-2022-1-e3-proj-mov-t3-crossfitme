@@ -9,6 +9,7 @@ const Button_ = (props) => {
             uppercase
             style={{borderRadius: 8, width: 180}}
             onPress={props.onPress}
+            icon = {props.icon}
         >
             {props.children}
         </Button>

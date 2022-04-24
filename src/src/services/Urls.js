@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://modern-rabbit-35.loca.lt';

@@ -12,7 +12,7 @@ import RelatorioAvaliacao from '../pages/RelatorioAvaliacao';
 
 const Stack = createNativeStackNavigator();
 
-const StackNavigator = () => {
+const Autenticacao = () => {
     return (
         <Stack.Navigator
             initialRouteName=''
@@ -57,4 +57,4 @@ const StackNavigator = () => {
     );
 };
 
-export default StackNavigator;
+export default Autenticacao;

@@ -1,17 +1,49 @@
-import * as React from 'react';
-import {Text} from 'react-native-paper';
-import {View, StyleSheet} from 'react-native';
+import React, { useState } from 'react';
+import {Text, TextInput } from 'react-native-paper';
+import {View, StyleSheet, Alert} from 'react-native';
 import Button_ from '../components/Button_';
 import Input from '../components/Input';
+import { register } from '../services/Auth.service';
+import { useNavigation } from '@react-navigation/native';
 
-const Login = () => {
-    const [nome, setNome] = React.useState('');
-    const [nascimento, setNascimento] = React.useState('');
-    const [endereco, setEndereco] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [senha, setSenha] = React.useState('');
+
+const Cadastro = () => {
+    const navigation = useNavigation();
+    const [nome, setNome] = useState('');
+    const [nascimento, setNascimento] = useState('');
+    const [endereco, setEndereco] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+
+    const handleRegister = () => {
+        register({
+            name: nome,
+            email: email,
+            password: senha,
+            rule: "aluno", 
+            endereco: endereco,
+            nascimento: nascimento
+
+        }).then(res => {
+          console.log(res);
+    
+          if (res) {
+    
+            Alert.alert('Atenção', 'Usuário Cadastrado com sucesso!', [
+                { text: "OK", onPress: () => navigation.goBack() }
+              ]);
+    
+          } else {
+    
+            Alert.alert('Atenção', 'Usuário não cadastrado!');
+          }
+    
+        });
+      }
+
     return (
         <View style={styles.container}>
+         
             <Text style={styles.title}>CrossFitMe</Text>
             <View style={styles.inputContainer}>
                 <Text style={styles.subtitle}>Cadastro</Text>
@@ -20,6 +52,7 @@ const Login = () => {
                     label='Nome'
                     value={nome}
                     onChangeText={(text) => setNome(text)}
+                    
                 />
                 <Input
                     style={{height: 50}}
@@ -43,10 +76,11 @@ const Login = () => {
                     style={{height: 50}}
                     label='Senha'
                     value={senha}
+                    secureTextEntry
                     onChangeText={(text) => setSenha(text)}
                 />
                 <View style={styles.button}>
-                    <Button_>Cadastrar</Button_>
+                    <Button_ onPress = { handleRegister }>Cadastrar</Button_>
                 </View>
                 <View
                     style={{
@@ -62,6 +96,7 @@ const Login = () => {
                             fontFamily: 'Poppins-SemiBold',
                             fontSize: 16,
                         }}
+                        onPress = {() => navigation.goBack()}
                     >
                         Fazer login
                     </Text>
@@ -71,7 +106,7 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Cadastro;
 
 const styles = StyleSheet.create({
     container: {

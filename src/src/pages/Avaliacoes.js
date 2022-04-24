@@ -12,7 +12,7 @@ import {useIsFocused} from '@react-navigation/native';
 
 import {getAulas} from '../services/CrossFitMeServicesDB';
 
-const Aulas = () => {
+const Avaliacoes = () => {
     const navigation = useNavigation();
     const isFocused = useIsFocused();
 
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
-export default Aulas;
+export default Avaliacoes;

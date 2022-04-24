@@ -1,11 +1,17 @@
-import {View, StyleSheet} from 'react-native';
-import {Text} from 'react-native-paper';
+import { View, StyleSheet } from 'react-native';
+import { Text, Button } from 'react-native-paper';
 import Container from '../components/Container';
 import ProfileImage from '../components/ProfileImage';
+import { useUser } from '../contexts/UserContext';
+import Button_ from '../components/Button_';
 
-const texts = {Idade: 30, Altura: '1,80', Peso: 80};
+const texts = { Idade: 30, Altura: '1,80', Peso: 80 };
 
 const Perfil = () => {
+
+    const { name } = useUser();
+    const { setSigned } = useUser();
+
     return (
         <Container>
             <View style={styles.profileContainer}>
@@ -13,13 +19,16 @@ const Perfil = () => {
                     source={require('../../assets/img/profile.jpg')}
                 />
             </View>
+            <Button onPress={() => {{setSigned(false)}}} icon = {'exit-to-app'} dark={true}  mode="contained"> sair </Button>
+
             <View style={styles.profileContainer}>
                 <View>
-                    <View style={{marginBottom: 15}}>
-                        <Text style={styles.textTitle}>Nome</Text>
-                        <Text style={styles.textDescription}>Bruno Souza</Text>
-                    </View>
-                    <View style={{...styles.textContainer, marginBottom: 15}}>
+                   
+                        <Text style={styles.textDescription}> {name} </Text>
+            
+
+
+                    <View style={{ ...styles.textContainer, marginBottom: 10 }}>
                         {Object.keys(texts).map((key) => {
                             return (
                                 <View key={key}>
