@@ -3,47 +3,40 @@ import { Text, Button } from 'react-native-paper';
 import Container from '../components/Container';
 import ProfileImage from '../components/ProfileImage';
 import { useUser } from '../contexts/UserContext';
-import Button_ from '../components/Button_';
 
-const texts = { Idade: 30, Altura: '1,80', Peso: 80 };
 
 const Perfil = () => {
 
     const { name } = useUser();
+    const { mail } = useUser();
+    const { endereco } = useUser();
+    const { nascimento } = useUser();
+    const { desde } = useUser();
     const { setSigned } = useUser();
 
     return (
         <Container>
+            <View style = {styles.topContainer}>
+                <Text style={styles.textDescription}> {name} </Text>
+                <Button onPress={() => { { setSigned(false) } }} icon={'exit-run'} dark={true} style={styles.button} color='gray'>sair </Button>
+            </View>
+
             <View style={styles.profileContainer}>
                 <ProfileImage
                     source={require('../../assets/img/profile.jpg')}
                 />
             </View>
-            <Button onPress={() => {{setSigned(false)}}} icon = {'exit-to-app'} dark={true}  mode="contained"> sair </Button>
 
             <View style={styles.profileContainer}>
                 <View>
-                   
-                        <Text style={styles.textDescription}> {name} </Text>
-            
-
-
-                    <View style={{ ...styles.textContainer, marginBottom: 10 }}>
-                        {Object.keys(texts).map((key) => {
-                            return (
-                                <View key={key}>
-                                    <Text style={styles.textTitle}>{key}</Text>
-                                    <Text style={styles.textDescription}>
-                                        {texts[key]}
-                                    </Text>
-                                </View>
-                            );
-                        })}
-                    </View>
-                </View>
-                <View>
-                    <Text style={styles.textTitle}>Membro desde</Text>
-                    <Text style={styles.textDescription}>14/01/2022</Text>
+                    <Text style={styles.textTitle}>E-mail: </Text>
+                    <Text style={styles.textDescription}> {mail} </Text>
+                    <Text style={styles.textTitle}>Data de Nascimento: </Text>
+                    <Text style={styles.textDescription}> {nascimento} </Text>
+                    <Text style={styles.textTitle}>Endereço: </Text>
+                    <Text style={styles.textDescription}> {endereco} </Text>
+                    <Text style={styles.textTitle}>Membro desde:</Text>
+                    <Text style={styles.textDescription}>{desde}</Text>
                 </View>
             </View>
         </Container>
@@ -57,10 +50,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
     },
-    textContainer: {
+    topContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         alignItems: 'flex-end',
+        margin: 8
     },
     textTitle: {
         fontSize: 20,
@@ -68,8 +62,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     textDescription: {
-        fontSize: 35,
+        fontSize: 30,
         fontFamily: 'Poppins-SemiBold',
         textAlign: 'center',
     },
+    button: {
+        alignSelf: 'center',
+    }
 });

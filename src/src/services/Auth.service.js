@@ -24,6 +24,7 @@ export const register = async (param) => {
       return await API.post(`${BASE_URL}/login`, param).then( 
         response => {
           return response.data;
+          console.log(response.data);
         },
         error =>{
           console.log(error);

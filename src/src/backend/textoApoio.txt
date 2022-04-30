@@ -5,9 +5,10 @@ npm install -g json-server-auth
 
 Executar o comando : [ json-server-auth db.json ]
 
-adicionar axios :
+adicionar localtunel e axios:
 
 npm install axios
+npm install -g localtunnel
 
 Executar o comando : [ lt --port 3000 ]
 

@@ -6,6 +6,7 @@ import Button_ from '../components/Button_';
 import TextButton from '../components/TextButton';
 import Input from '../components/Input';
 import { login } from '../services/Auth.service';
+
 import { useUser } from '../contexts/UserContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -13,7 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const Login = () => {
 
     const navigation = useNavigation();
-    const { setSigned, setName } = useUser();
+    const { setSigned, setName, setmail, setNascimento, setEndereco, setDate, setRule } = useUser();
     const [email, setEmail] = useState('');
     const [password, setSenha] = useState('');
 
@@ -23,12 +24,18 @@ const Login = () => {
             email: email,
             password: password
         }).then(res => {
+
             console.log(res);
 
             if (res && res.user) {
 
                 setSigned(true);
                 setName(res.user.name);
+                setmail(res.user.email);
+                setNascimento(res.user.nascimento);
+                setEndereco(res.user.endereco);
+                setDate(res.user.desde);
+                setRule(res.user.rule);
                 AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
             } else {
 

@@ -1,3 +1,5 @@
+# Extensão [Rest Client] necessária
+
 ###GET GASTOS
 GET http://localhost:3000/users HTTP/1.1
 
@@ -7,11 +9,12 @@ content-type: application/json
 
 {
     "name": "Ana",
-    "email": "ana2@gmail.com",
+    "email": "Ana@gmail.com",
     "password": "12345",
     "rule": "admin", 
     "endereco": "rua morteiro, 351",
-    "nascimento": "14-12-1999"
+    "nascimento": "14/12/1999",
+    "desde": "30/04/2022"
 }
 
 ###LOGIN
@@ -19,6 +22,6 @@ POST http://localhost:3000/login HTTP/1.1
 content-type: application/json
 
 {
-    "email": "ana2@gmail.com",
+    "email": "Ana@gmail.com",
     "password": "12345"
 }

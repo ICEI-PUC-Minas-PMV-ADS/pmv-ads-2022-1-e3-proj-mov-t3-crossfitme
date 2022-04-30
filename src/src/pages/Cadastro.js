@@ -22,7 +22,8 @@ const Cadastro = () => {
             password: senha,
             rule: "aluno", 
             endereco: endereco,
-            nascimento: nascimento
+            nascimento: nascimento,
+            desde: new Date().toLocaleDateString(),
 
         }).then(res => {
           console.log(res);

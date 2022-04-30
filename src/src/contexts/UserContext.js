@@ -1,4 +1,4 @@
-import React, {useState, useContext, createContext } from "react";
+import React, {useState, useContext, createContext} from 'react';
 
 export const UserContext = createContext();
 
@@ -6,6 +6,11 @@ export default function UserProvider({ children }) {
 
     const [signed, setSigned] = useState(false);
     const [name, setName] = useState(false);
+    const [mail, setmail] = useState(false);
+    const [nascimento, setNascimento] = useState(false);
+    const [endereco, setEndereco] = useState(false);
+    const [desde, setDate] = useState(false); 
+    const [rule, setRule] = useState(false);
 
     return (
         <UserContext.Provider
@@ -14,15 +19,25 @@ export default function UserProvider({ children }) {
                 setSigned,
                 name,
                 setName,
+                mail,
+                setmail,
+                nascimento,
+                setNascimento,
+                endereco,
+                setEndereco,
+                desde,
+                setDate,
+                rule,
+                setRule,
             }}
         >
-            {children}
+            {  children }
         </UserContext.Provider>
     );
 }
 
 export function useUser() {
     const context = useContext(UserContext);
-    const { signed, setSigned, name, setName } = context;
-    return { signed, setSigned, name, setName };
+    const { signed, setSigned, name, setName, mail, setmail, nascimento, setNascimento, endereco, setEndereco, desde, setDate, rule, setRule } = context;
+    return{ signed, setSigned, name, setName, mail, setmail, nascimento, setNascimento, endereco, setEndereco, desde, setDate, rule, setRule };
 }

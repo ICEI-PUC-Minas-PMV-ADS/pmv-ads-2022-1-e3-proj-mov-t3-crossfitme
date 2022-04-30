@@ -1,22 +1,54 @@
 {
   "users": [
     {
-      "email": "ana2@gmail.com",
-      "password": "$2a$10$vVFARznywxWIrrNeQdFP3u5538uuBYEiVGALIKBLgnZRBOQI8Q2MW",
+      "email": "Ana@gmail.com",
+      "password": "$2a$10$nMaSeTvL7TxjfzRFQf7Nb.dbpE7KGXJUmVq.yXMAZprFcxR0dUI1m",
       "name": "Ana",
       "rule": "admin",
       "endereco": "rua morteiro, 351",
-      "nascimento": "14-12-1999",
+      "nascimento": "14/12/1999",
+      "desde": "30/04/2022",
       "id": 1
     },
     {
-      "email": "Igor@gmail",
-      "password": "$2a$10$lichywPVFqrzhXIiKcbiUOmxsKhictHZyQnVgGjCx3V9tWIH98C2K",
+      "email": "Igor@gmail.com",
+      "password": "$2a$10$WdUqpFkvKj1GpZtn43ZLZuPSjrKoEjRIcj.P5O60Jr0o4ze5mqUMq",
       "name": "Igor",
       "rule": "aluno",
-      "endereco": "Rua 7",
-      "nascimento": "14-05-1997",
+      "endereco": "Rua janeiro, 567",
+      "nascimento": "14/05/1997",
+      "desde": "04/30/22",
       "id": 2
+    },
+    {
+      "email": "Jana@gmail.com",
+      "password": "$2a$10$w9WbrJHyu3YO5t4p8wc9su/MJb9h8SugDsdFqvo.Sn.KQVAzAMM6i",
+      "name": "Janaina",
+      "rule": "aluno",
+      "endereco": "Rua um, 1",
+      "nascimento": "26/04/2000",
+      "desde": "04/30/22",
+      "id": 3
+    },
+    {
+      "email": "J@gmail.com",
+      "password": "$2a$10$w.CaNULaM01nDx9RNbACXu26tDC4Tyf6ykL1PzUxEedDyznfSyepW",
+      "name": "Joao",
+      "rule": "aluno",
+      "endereco": "Tua",
+      "nascimento": "12/05/1990",
+      "desde": "04/30/22",
+      "id": 4
+    },
+    {
+      "email": "A@gmail",
+      "password": "$2a$10$CaoW/ynuzv/.54kmCbk3AeeRhkdmx2kFugLJ5z0NsPyoXgBH6pG0G",
+      "name": "M",
+      "rule": "aluno",
+      "endereco": "R",
+      "nascimento": "1",
+      "desde": "04/30/22",
+      "id": 5
     }
   ],
   "aulas": [],
