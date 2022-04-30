@@ -9,12 +9,14 @@ import FloatingButton from '../components/FloatingButton';
 
 import {useNavigation} from '@react-navigation/native';
 import {useIsFocused} from '@react-navigation/native';
+import { useUser } from '../contexts/UserContext';
 
 import {getAulas} from '../services/CrossFitMeServicesDB';
 
 const Avaliacoes = () => {
     const navigation = useNavigation();
     const isFocused = useIsFocused();
+    const { rule } = useUser();
 
     const [aula, setAula] = useState([]);
 
@@ -58,9 +60,12 @@ const Avaliacoes = () => {
                     showsVerticalScrollIndicator={false}
                 />
             </View>
-            <FloatingButton
+         
+                {rule == 'aluno'? <></> : <FloatingButton
                 onPress={() => navigation.navigate('CadastroAvaliacao')}
-            />
+            /> }
+            
+           
         </View>
     );
 };

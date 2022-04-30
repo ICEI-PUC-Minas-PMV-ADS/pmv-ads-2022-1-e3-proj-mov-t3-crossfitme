@@ -44,14 +44,8 @@ const Autenticacao = () => {
                 <Stack.Screen name='Aulas' component={Aulas} />
                 <Stack.Screen name='CadastroAula' component={CadastroAula} />
                 <Stack.Screen name='Avaliacoes' component={Avaliacoes} />
-                <Stack.Screen
-                    name='CadastroAvaliacao'
-                    component={CadastroAvaliacao}
-                />
-                <Stack.Screen
-                    name='RelatorioAvaliacao'
-                    component={RelatorioAvaliacao}
-                />
+                <Stack.Screen name='CadastroAvaliacao' component={CadastroAvaliacao}/>
+                <Stack.Screen name='RelatorioAvaliacao' component={RelatorioAvaliacao} />
             </Stack.Group>
         </Stack.Navigator>
     );
