@@ -1,72 +1,81 @@
-import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, FlatList} from 'react-native';
-import {Text} from 'react-native-paper';
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, FlatList, SafeAreaView, ScrollView } from 'react-native';
+import { Text, List, Card } from 'react-native-paper';
 
 import ProfileCard from '../components/ProfileCard';
 import FloatingIcon from '../components/FloatingIcon';
 import AvaliacaoCard from '../components/AvaliacaoCard';
 import FloatingButton from '../components/FloatingButton';
 
-import {useNavigation} from '@react-navigation/native';
-import {useIsFocused} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { useIsFocused } from '@react-navigation/native';
 import { useUser } from '../contexts/UserContext';
+import { GetRelatorios } from '../services/relatoriofisico.service';
 
-import {getAulas} from '../services/CrossFitMeServicesDB';
 
 const Avaliacoes = () => {
     const navigation = useNavigation();
     const isFocused = useIsFocused();
     const { rule } = useUser();
+    const { name } = useUser();
 
-    const [aula, setAula] = useState([]);
+    const [relatorio, setRelatorios] = useState([]);
 
     useEffect(() => {
-        getAulas().then((dados) => {
-            setAula(dados);
+        GetRelatorios().then((dados) => {
+            setRelatorios(dados);
         });
     }, [isFocused]);
 
-    const renderItem = ({item}) => (
-        <AvaliacaoCard qtd={'/' + item.qtd} time={item.hora}>
-            {item.descricao}
-        </AvaliacaoCard>
-    );
+    const renderItem = ({ item }) => (
+        <AvaliacaoCard data={item.data} nome={item.name}  
+        onPress={() => navigation.navigate('RelatorioAvaliacao', {item: item})}
+       /> 
+       );
+    
     return (
+
+
         <View style={styles.container}>
-            <View style={{marginBottom: 30}}>
-                <ProfileCard
-                    name={'Bruno Souza'}
-                    source={require('../../assets/img/profile.jpg')}
-                />
-            </View>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    marginBottom: 30,
-                }}
-            >
-                <FloatingIcon name={'file-document-outline'} />
-                <Text style={{fontFamily: 'Poppins-SemiBold', fontSize: 22}}>
-                    Avaliações Físicas
-                </Text>
-            </View>
-            <View style={styles.flatList}>
-                <FlatList
-                    data={aula}
-                    renderItem={renderItem}
-                    keyExtractor={(item) => item.id}
-                    showsVerticalScrollIndicator={false}
-                />
-            </View>
-         
-                {rule == 'aluno'? <></> : <FloatingButton
+            {/* <SafeAreaView>
+                <ScrollView > */}
+                    <View style={{ marginBottom: 20 }}>
+                        <ProfileCard
+                            name={name}
+                            source={require('../../assets/img/profile.jpg')}
+                        />
+                    </View>
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginBottom: 20,
+                        }}
+                    >
+                        <FloatingIcon name={'file-document-outline'} />
+                        <Text style={{ fontFamily: 'Poppins-SemiBold', fontSize: 22 }}>
+                            Avaliações Físicas
+                        </Text>
+                    </View>
+                    <View style={styles.flatList}>
+                        <FlatList
+                            data={relatorio}
+                            renderItem={renderItem}
+                            keyExtractor={(item) => item.id}
+                            // showsVerticalScrollIndicator={false}
+                        />
+                    </View>
+                {/* </ScrollView>
+            </SafeAreaView> */}
+
+            {rule == 'aluno' ? null : <FloatingButton
                 onPress={() => navigation.navigate('CadastroAvaliacao')}
-            /> }
-            
-           
+            />}
+
         </View>
+
+
     );
 };
 

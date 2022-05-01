@@ -14,7 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const Login = () => {
 
     const navigation = useNavigation();
-    const { setSigned, setName, setmail, setNascimento, setEndereco, setDate, setRule } = useUser();
+    const { setSigned, setName, setmail, setNascimento, setEndereco, setDate, setRule, setId } = useUser();
     const [email, setEmail] = useState('');
     const [password, setSenha] = useState('');
 
@@ -36,6 +36,7 @@ const Login = () => {
                 setEndereco(res.user.endereco);
                 setDate(res.user.desde);
                 setRule(res.user.rule);
+                setId(res.user.id);
                 AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
             } else {
 

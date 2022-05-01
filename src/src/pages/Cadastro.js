@@ -5,7 +5,7 @@ import Button_ from '../components/Button_';
 import Input from '../components/Input';
 import { register } from '../services/Auth.service';
 import { useNavigation } from '@react-navigation/native';
-
+import moment from 'moment';
 
 const Cadastro = () => {
     const navigation = useNavigation();
@@ -23,7 +23,7 @@ const Cadastro = () => {
             rule: "aluno", 
             endereco: endereco,
             nascimento: nascimento,
-            desde: new Date().toLocaleDateString(),
+            desde: moment(new Date()).format('DD/MM/YYYY'),
 
         }).then(res => {
           console.log(res);

@@ -11,6 +11,7 @@ export default function UserProvider({ children }) {
     const [endereco, setEndereco] = useState(false);
     const [desde, setDate] = useState(false); 
     const [rule, setRule] = useState(false);
+    const [id, setId] = useState(false);
 
     return (
         <UserContext.Provider
@@ -29,6 +30,8 @@ export default function UserProvider({ children }) {
                 setDate,
                 rule,
                 setRule,
+                id,
+                setId
             }}
         >
             {  children }
@@ -38,6 +41,6 @@ export default function UserProvider({ children }) {
 
 export function useUser() {
     const context = useContext(UserContext);
-    const { signed, setSigned, name, setName, mail, setmail, nascimento, setNascimento, endereco, setEndereco, desde, setDate, rule, setRule } = context;
-    return{ signed, setSigned, name, setName, mail, setmail, nascimento, setNascimento, endereco, setEndereco, desde, setDate, rule, setRule };
+    const { signed, setSigned, name, setName, mail, setmail, nascimento, setNascimento, endereco, setEndereco, desde, setDate, rule, setRule, id, setId } = context;
+    return{ signed, setSigned, name, setName, mail, setmail, nascimento, setNascimento, endereco, setEndereco, desde, setDate, rule, setRule, id, setId };
 }
