@@ -1,19 +1,37 @@
-import {View, StyleSheet} from 'react-native';
-import {Card, Text} from 'react-native-paper';
+import { View, StyleSheet } from 'react-native';
+import { Card, Text } from 'react-native-paper';
 import FloatingIcon from '../components/FloatingIcon';
 import EvaluationCard from '../components/EvaluationCard';
 import Button_ from '../components/Button_';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import { deleteRelatorio } from '../services/relatoriofisico.service';
+import { useUser } from '../contexts/UserContext';
 
-const Avaliacao = () => {
+
+
+const RelatorioAvaliacao = ({ route }) => {
+
+    const { item } = route.params;
+
+    const { rule } = useUser();
+
+    const handleExcluir = () => {
+        deleteRelatorio(item.id).then(res => {
+            navigation.goBack();
+        });
+    };
+
+    
+
     const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <View style={styles.cardContainer}>
                 <Card style={styles.card}>
                     <Card.Title
                         titleStyle={styles.cardTitle}
-                        title={'Bruno Souza'}
+                        title={item.name}
                     />
                 </Card>
             </View>
@@ -21,12 +39,12 @@ const Avaliacao = () => {
                 style={{
                     flexDirection: 'row',
                     justifyContent: 'center',
-                    alignItems: 'center',
+                    alignitem: 'center',
                     marginBottom: 30,
                 }}
             >
                 <FloatingIcon name={'file-document-outline'} />
-                <Text style={{fontFamily: 'Poppins-SemiBold', fontSize: 22}}>
+                <Text style={{ fontFamily: 'Poppins-SemiBold', fontSize: 22 }}>
                     Relatório de Avaliação Física
                 </Text>
             </View>
@@ -35,16 +53,21 @@ const Avaliacao = () => {
                     marginBottom: 30,
                 }}
             >
-                <EvaluationCard />
+                <EvaluationCard data={item} />
+
             </View>
-            <View style={{alignItems: 'center'}}>
+            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
                 <Button_ onPress={() => navigation.goBack()}>Voltar</Button_>
+
+                {rule == 'aluno' ? null : <Button_ onPress={handleExcluir}>Excluir</Button_>}
+                
+
             </View>
         </View>
     );
 };
 
-export default Avaliacao;
+export default RelatorioAvaliacao;
 
 const styles = StyleSheet.create({
     container: {
@@ -52,7 +75,7 @@ const styles = StyleSheet.create({
         marginTop: 15,
         flex: 1,
     },
-    cardContainer: {marginTop: 15, marginBottom: 30},
+    cardContainer: { marginTop: 15, marginBottom: 30 },
     card: {
         backgroundColor: '#ffffff',
         height: 90,

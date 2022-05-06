@@ -1,16 +1,14 @@
 import {Text, Card} from 'react-native-paper';
 import {StyleSheet, View} from 'react-native';
-
 import FloatingIcon from './FloatingIcon';
-
 import {useNavigation} from '@react-navigation/native';
 
 const AvaliacaoCard = (props) => {
     const navigation = useNavigation();
     return (
         <Card
-            onPress={() => navigation.navigate('RelatorioAvaliacao')}
             style={styles.card}
+            {...props}    
         >
             <View style={{margin: 15}}>
                 <View

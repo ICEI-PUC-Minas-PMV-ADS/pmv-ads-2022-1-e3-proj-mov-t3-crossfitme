@@ -1,6 +1,6 @@
 # Extensão [Rest Client] necessária
 
-###GET GASTOS
+###GET 
 GET http://localhost:3000/users HTTP/1.1
 
 ###CREATE
