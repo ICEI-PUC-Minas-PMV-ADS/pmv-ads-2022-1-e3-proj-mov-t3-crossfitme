@@ -6,7 +6,12 @@ A metodologia contempla as ferramentas utilizadas, bem como a organização da e
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue. 
 
-![quadro git](https://user-images.githubusercontent.com/81633095/161395846-93560ec8-7b2c-4368-9a5b-ee9e6bfcffed.jpg)
+| Ambiente | Plataforma | Link de Acesso | 
+| -------- | ---------- | -------------- |
+| Repositório do Cod. Fonte |  GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e3-proj-mov-t3-crossfitme | 
+| Documentos do Projeto | GitHub | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e3-proj-mov-t3-crossfitme |
+| Projeto de Interface | Figma e MockFlow | https://www.figma.com/file/DiGiQW5vvrzUdnCab59KmP/CrossFitMe |
+| Gerenciamento do Projeto | Trello | https://trello.com/b/Z3KsPVmq/crossfitme |
 
 ## Controle de Versão
 
