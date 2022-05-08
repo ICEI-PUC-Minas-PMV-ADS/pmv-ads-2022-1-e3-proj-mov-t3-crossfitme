@@ -3,7 +3,7 @@ adicionar as bibliotecas do json:
 npm install -g json-server
 npm install -g json-server-auth
 
-Executar o comando : [ json-server-auth db.json ]
+Executar o comando : [ json-server-auth db.json ] [json-server --watch db.json]
 
 adicionar localtunel e axios:
 
