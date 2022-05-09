@@ -5,7 +5,7 @@ const Button_ = (props) => {
         <Button
             mode='contained'
             compact
-            color='#000000'
+            color=  {props.color ? props.color : '#000000'}//'#000000'
             uppercase
             style={{borderRadius: 8, width: 180}}
             onPress={props.onPress}

@@ -88,7 +88,7 @@ const AulaDetalhe = ({ route }) => {
     return (
         <View style={styles.container}>
             <View>
-                {rule == "admin" ? <Button_ onPress={handleCancelarAula}> Cancelar aula</Button_> : null}
+                {rule == "admin" ? <Button_ onPress={handleCancelarAula} color='red'> Cancelar aula</Button_> : null}
             </View>
             <View style={styles.cardContainer}>
                 <Card style={styles.card}>
