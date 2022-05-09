@@ -66,6 +66,7 @@ const Avaliacoes = () => {
                             // showsVerticalScrollIndicator={false}
                         />
                     </View>
+                    
                 {/* </ScrollView>
             </SafeAreaView> */}
 

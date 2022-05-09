@@ -9,35 +9,9 @@
       "nascimento": "14/12/1999",
       "desde": "30/04/2022",
       "id": 1
-    },
-    {
-      "email": "Igor@gmail.com",
-      "password": "$2a$10$X1YHzaQ0iS87Lklm0eD5.OAGX1UuDv.fCI4tL3SWMb9STIrZPIEES",
-      "name": "Igor",
-      "rule": "aluno",
-      "endereco": "Rua un",
-      "nascimento": "14/05/1997",
-      "desde": "05/01/22",
-      "id": 2
     }
   ],
   "aulas": [],
-  "relatorios": [
-    {
-      "instrutorId": 1,
-      "alunoId": "2",
-      "name": "João Paulo",
-      "idade": "23",
-      "classificacao": "Bom ",
-      "email": "Joao@gmail.com",
-      "data": "06/05/2022",
-      "peso": "75",
-      "altura": "1.77",
-      "imc": "21",
-      "gordura": "1%",
-      "massaGorda": "25",
-      "massaMagra": "45",
-      "id": 2
-    }
-  ]
+  "aulaUser": [],
+  "relatorios": []
 }

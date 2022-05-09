@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://red-mugs-train-45-187-115-15.loca.lt';
+export const BASE_URL = 'https://slow-spies-brake-45-187-115-15.loca.lt';

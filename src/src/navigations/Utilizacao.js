@@ -6,6 +6,8 @@ import Avaliacao from '../pages/Avaliacoes';
 import Home from '../pages/Home';
 import CadastroAvaliacao from '../pages/CadastroAvaliacao';
 import RelatorioAvaliacao from '../pages/RelatorioAvaliacao';
+import CadastroAula from '../pages/CadastroAula';
+import AulaDetalhe from '../pages/AulaDetalhe';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,8 +34,8 @@ const Utilizacao = () => {
             <Stack.Screen name='Avaliacao' component={Avaliacao} options={{ headerShown: false }}/>
             <Stack.Screen name='CadastroAvaliacao' component={CadastroAvaliacao} />
             <Stack.Screen name='RelatorioAvaliacao' component={RelatorioAvaliacao} />
-
-
+            <Stack.Screen name='CadastroAula' component={CadastroAula} />
+            <Stack.Screen name='AulaDetalhe' component={AulaDetalhe} />
 
         </Stack.Navigator>
     );
