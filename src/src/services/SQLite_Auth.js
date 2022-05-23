@@ -2,10 +2,10 @@ import * as SQLite from 'expo-sqlite';
 
 const Database = {
     getConnection: () => {
-        const db = SQLite.openDatabase('crossfitme.db');
+        const db = SQLite.openDatabase('new.db');
         db.transaction((tx) => {
             tx.executeSql(
-                'create table if not exists aulas (id integer primary key not null, data text not null, hora text not null, descricao text not null, qtd text not null);',
+                `create table if not exists token (id integer primary key not null, token text not null, nome text not null, email text not null, nascimento text not null, endereco text not null, desde text not null, rule text not null, user_id text not null);`,
             );
         });
 

@@ -1,34 +1,53 @@
-import React, { useState } from 'react';
-import { Text } from 'react-native-paper';
-import { View, StyleSheet, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React, {useState, useEffect} from 'react';
+import {Text} from 'react-native-paper';
+import {View, StyleSheet, Alert} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import Button_ from '../components/Button_';
 import TextButton from '../components/TextButton';
 import Input from '../components/Input';
-import { login } from '../services/Auth.service';
+import {login} from '../services/Auth.service';
 
-import { useUser } from '../contexts/UserContext';
+import {useUser} from '../contexts/UserContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import {getToken, insertToken} from '../services/CrossFitMeServicesDB';
 
 const Login = () => {
-
     const navigation = useNavigation();
-    const { setSigned, setName, setmail, setNascimento, setEndereco, setDate, setRule, setId } = useUser();
+    const {
+        setSigned,
+        setName,
+        setmail,
+        setNascimento,
+        setEndereco,
+        setDate,
+        setRule,
+        setId,
+    } = useUser();
     const [email, setEmail] = useState('');
     const [password, setSenha] = useState('');
 
-    const handleLogin = () => {
+    useEffect(() => {
+        getToken().then((res) => {
+            setName(res.nome);
+            setmail(res.email);
+            setNascimento(res.nascimento);
+            setEndereco(res.endereco);
+            setDate(res.desde);
+            setRule(res.rule);
+            setId(res.user_id);
+            AsyncStorage.setItem('@TOKEN_KEY', res.token)
+                .then(() => setSigned(true))
+                .catch((error) => {});
+        });
+    }, []);
 
+    const handleLogin = () => {
         login({
             email: email,
-            password: password
-        }).then(res => {
-
+            password: password,
+        }).then((res) => {
             console.log(res);
-
             if (res && res.user) {
-
                 setSigned(true);
                 setName(res.user.name);
                 setmail(res.user.email);
@@ -37,14 +56,13 @@ const Login = () => {
                 setDate(res.user.desde);
                 setRule(res.user.rule);
                 setId(res.user.id);
+                insertToken(res);
                 AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
             } else {
-
                 Alert.alert('Atenção', 'Usuário ou senha inválidos!');
             }
-
         });
-    }
+    };
 
     return (
         <View style={styles.container}>
@@ -61,10 +79,7 @@ const Login = () => {
                 onChangeText={(text) => setSenha(text)}
             />
             <View style={styles.button}>
-                <Button_
-                    mode="contained"
-                    onPress={handleLogin}
-                >
+                <Button_ mode='contained' onPress={handleLogin}>
                     LOGIN
                 </Button_>
             </View>
@@ -84,7 +99,7 @@ const Login = () => {
                     alignItems: 'center',
                 }}
             >
-                <Text style={{ marginRight: 5, fontSize: 16 }}>
+                <Text style={{marginRight: 5, fontSize: 16}}>
                     Não tem uma conta?
                 </Text>
                 <TextButton onPress={() => navigation.navigate('Cadastro')}>
