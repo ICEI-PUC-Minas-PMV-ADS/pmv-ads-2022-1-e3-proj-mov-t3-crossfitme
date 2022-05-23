@@ -28,16 +28,18 @@ const Login = () => {
 
     useEffect(() => {
         getToken().then((res) => {
-            setName(res.nome);
-            setmail(res.email);
-            setNascimento(res.nascimento);
-            setEndereco(res.endereco);
-            setDate(res.desde);
-            setRule(res.rule);
-            setId(res.user_id);
-            AsyncStorage.setItem('@TOKEN_KEY', res.token)
-                .then(() => setSigned(true))
-                .catch((error) => {});
+            if (res !== undefined) {
+                setName(res.nome);
+                setmail(res.email);
+                setNascimento(res.nascimento);
+                setEndereco(res.endereco);
+                setDate(res.desde);
+                setRule(res.rule);
+                setId(res.user_id);
+                AsyncStorage.setItem('@TOKEN_KEY', res.token)
+                    .then(() => setSigned(true))
+                    .catch((error) => {});
+            }
         });
     }, []);
 
