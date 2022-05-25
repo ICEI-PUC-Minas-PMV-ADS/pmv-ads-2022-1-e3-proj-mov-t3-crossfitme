@@ -1,5 +1,5 @@
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Perfil from '../pages/Perfil';
 import Aulas from '../pages/Aulas';
 import Avaliacao from '../pages/Avaliacoes';
@@ -19,7 +19,7 @@ const Utilizacao = () => {
                 title: 'CrossFitMe',
                 statusBarStyle: 'auto',
                 statusBarHidden: true,
-                headerStyle: { backgroundColor: '#000' },
+                headerStyle: {backgroundColor: '#000'},
                 headerTintColor: '#fff',
                 headerTitleStyle: {
                     fontWeight: 'bold',
@@ -28,15 +28,20 @@ const Utilizacao = () => {
                 headerBackVisible: false,
             }}
         >
-            <Stack.Screen name='Home' component={Home} options={{ headerShown: false }} />
-            <Stack.Screen name='Perfil' component={Perfil} options={{ headerShown: false }} />
-            <Stack.Screen name='Aulas' component={Aulas} options={{ headerShown: false }} />
-            <Stack.Screen name='Avaliacao' component={Avaliacao} options={{ headerShown: false }}/>
-            <Stack.Screen name='CadastroAvaliacao' component={CadastroAvaliacao} />
-            <Stack.Screen name='RelatorioAvaliacao' component={RelatorioAvaliacao} />
+            <Stack.Screen name='Home' component={Home} />
+            <Stack.Screen name='Perfil' component={Perfil} />
+            <Stack.Screen name='Aulas' component={Aulas} />
+            <Stack.Screen name='Avaliacao' component={Avaliacao} />
+            <Stack.Screen
+                name='CadastroAvaliacao'
+                component={CadastroAvaliacao}
+            />
+            <Stack.Screen
+                name='RelatorioAvaliacao'
+                component={RelatorioAvaliacao}
+            />
             <Stack.Screen name='CadastroAula' component={CadastroAula} />
             <Stack.Screen name='AulaDetalhe' component={AulaDetalhe} />
-
         </Stack.Navigator>
     );
 };
