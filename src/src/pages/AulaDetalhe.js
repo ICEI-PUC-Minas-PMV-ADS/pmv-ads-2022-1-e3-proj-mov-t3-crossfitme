@@ -128,7 +128,7 @@ const AulaDetalhe = ({route}) => {
                 {/* <ListaAlunos /> */}
             </View>
 
-            <View style={{alignItems: 'flex-start'}}>
+            <View style={styles.buttonContainer}>
                 {rule == 'admin' ? (
                     <Button_ onPress={handleCancelarAula} color='red'>
                         Cancelar aula
@@ -138,8 +138,7 @@ const AulaDetalhe = ({route}) => {
                 ) : (
                     <Button_ onPress={handleDesmarcar}>Desmarcar</Button_>
                 )}
-            </View>
-            <View style={{alignItems: 'flex-end'}}>
+
                 <Button_ onPress={() => navigation.goBack()}>Voltar</Button_>
             </View>
         </View>
@@ -202,5 +201,9 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         textAlign: 'center',
         color: '#666666',
+    },
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
 });
