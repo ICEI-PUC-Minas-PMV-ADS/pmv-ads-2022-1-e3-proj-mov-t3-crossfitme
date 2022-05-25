@@ -5,11 +5,11 @@ const Button_ = (props) => {
         <Button
             mode='contained'
             compact
-            color=  {props.color ? props.color : '#000000'}//'#000000'
+            color={props.color ? props.color : '#000000'} //'#000000'
             uppercase
-            style={{borderRadius: 8, width: 180}}
+            style={{borderRadius: 8, width: 150}}
             onPress={props.onPress}
-            icon = {props.icon}
+            icon={props.icon}
         >
             {props.children}
         </Button>
