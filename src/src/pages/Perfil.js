@@ -3,7 +3,7 @@ import {Text, Button} from 'react-native-paper';
 import Container from '../components/Container';
 import ProfileImage from '../components/ProfileImage';
 import {useUser} from '../contexts/UserContext';
-import {dropData, dropToken, getToken} from '../services/CrossFitMeServicesDB';
+import {dropToken} from '../services/CrossFitMeServicesDB';
 
 const Perfil = () => {
     const {rule} = useUser();
@@ -17,7 +17,7 @@ const Perfil = () => {
     return (
         <Container>
             <View style={styles.topContainer}>
-                <Text style={styles.textTitle}> {rule} </Text>
+                <Text style={styles.textRule}>{rule}</Text>
                 <Button
                     onPress={() => {
                         {
@@ -30,7 +30,7 @@ const Perfil = () => {
                     style={styles.button}
                     color='gray'
                 >
-                    sair{' '}
+                    Sair
                 </Button>
             </View>
 
@@ -43,20 +43,18 @@ const Perfil = () => {
                 <ScrollView>
                     <View style={styles.profileContainer}>
                         <View>
-                            <Text style={styles.textDescription}> {name} </Text>
-                            <Text style={styles.textTitle}>E-mail: </Text>
-                            <Text style={styles.textDescription}> {mail} </Text>
+                            <Text style={styles.textDescription}>{name}</Text>
+                            <Text style={styles.textTitle}>E-mail:</Text>
+                            <Text style={styles.textDescription}>{mail}</Text>
                             <Text style={styles.textTitle}>
-                                Data de Nascimento:{' '}
+                                Data de Nascimento:
                             </Text>
                             <Text style={styles.textDescription}>
-                                {' '}
-                                {nascimento}{' '}
+                                {nascimento}
                             </Text>
-                            <Text style={styles.textTitle}>Endereço: </Text>
+                            <Text style={styles.textTitle}>Endereço:</Text>
                             <Text style={styles.textDescription}>
-                                {' '}
-                                {endereco}{' '}
+                                {endereco}
                             </Text>
                             <Text style={styles.textTitle}>Membro desde:</Text>
                             <Text style={styles.textDescription}>{desde}</Text>
@@ -74,17 +72,25 @@ const styles = StyleSheet.create({
     profileContainer: {
         flex: 1,
         justifyContent: 'center',
+        marginBottom: 15,
     },
     topContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        margin: 8,
+        alignItems: 'center',
+        marginHorizontal: 15,
+        marginVertical: 2,
     },
     textTitle: {
         fontSize: 16,
         color: '#666666',
         textAlign: 'center',
+    },
+    textRule: {
+        fontSize: 16,
+        color: '#666666',
+        textAlign: 'center',
+        textTransform: 'capitalize',
     },
     textDescription: {
         fontSize: 24,
