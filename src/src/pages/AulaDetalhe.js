@@ -109,12 +109,8 @@ const AulaDetalhe = ({route}) => {
                         </View>
                     </View>
                     <View>
-                        <Text style={{...styles.cardTitle, marginBottom: 15}}>
-                            {item.descricao}
-                        </Text>
                         <Text style={styles.cardText}>Alunos</Text>
-
-                        <View>
+                        <View style={styles.card}>
                             <FlatList
                                 data={alunos}
                                 renderItem={renderItem}
