@@ -1,40 +1,45 @@
-import { View, StyleSheet } from 'react-native';
-import { Card, Text } from 'react-native-paper';
+import {View, StyleSheet} from 'react-native';
+import {Card, Text} from 'react-native-paper';
 import FloatingIcon from '../components/FloatingIcon';
 import EvaluationCard from '../components/EvaluationCard';
 import Button_ from '../components/Button_';
-import { useNavigation } from '@react-navigation/native';
-import { deleteRelatorio } from '../services/relatoriofisico.service';
-import { useUser } from '../contexts/UserContext';
+import {useNavigation} from '@react-navigation/native';
+import {deleteRelatorio} from '../services/relatoriofisico.service';
+import {useUser} from '../contexts/UserContext';
+import ProfileCard from '../components/ProfileCard';
 
-
-
-const RelatorioAvaliacao = ({ route }) => {
-
-    const { item } = route.params;
-
-    const { rule } = useUser();
+const RelatorioAvaliacao = ({route}) => {
+    const {item} = route.params;
+    const {name} = useUser();
+    const {rule} = useUser();
 
     const handleExcluir = () => {
-        deleteRelatorio(item.id).then(res => {
+        deleteRelatorio(item.id).then((res) => {
             navigation.goBack();
         });
     };
-
-    
 
     const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
-            <View style={styles.cardContainer}>
-                <Card style={styles.card}>
-                    <Card.Title
-                        titleStyle={styles.cardTitle}
-                        title={item.name}
+            {rule == 'admin' ? (
+                <View style={styles.cardContainer}>
+                    <Card style={styles.card}>
+                        <Card.Title
+                            titleStyle={styles.cardTitle}
+                            title={item.name}
+                        />
+                    </Card>
+                </View>
+            ) : (
+                <View style={{marginBottom: 30}}>
+                    <ProfileCard
+                        name={name}
+                        source={require('../../assets/img/profile.jpg')}
                     />
-                </Card>
-            </View>
+                </View>
+            )}
             <View
                 style={{
                     flexDirection: 'row',
@@ -44,7 +49,7 @@ const RelatorioAvaliacao = ({ route }) => {
                 }}
             >
                 <FloatingIcon name={'file-document-outline'} />
-                <Text style={{ fontFamily: 'Poppins-SemiBold', fontSize: 22 }}>
+                <Text style={{fontFamily: 'Poppins-SemiBold', fontSize: 22}}>
                     Relatório de Avaliação Física
                 </Text>
             </View>
@@ -54,14 +59,13 @@ const RelatorioAvaliacao = ({ route }) => {
                 }}
             >
                 <EvaluationCard data={item} />
-
             </View>
-            <View style={{ alignItems: 'center', flexDirection: 'row' }}>
+            <View style={{alignItems: 'center', flexDirection: 'row'}}>
                 <Button_ onPress={() => navigation.goBack()}>Voltar</Button_>
 
-                {rule == 'aluno' ? null : <Button_ onPress={handleExcluir}>Excluir</Button_>}
-                
-
+                {rule == 'aluno' ? null : (
+                    <Button_ onPress={handleExcluir}>Excluir</Button_>
+                )}
             </View>
         </View>
     );
@@ -75,7 +79,7 @@ const styles = StyleSheet.create({
         marginTop: 15,
         flex: 1,
     },
-    cardContainer: { marginTop: 15, marginBottom: 30 },
+    cardContainer: {marginTop: 15, marginBottom: 30},
     card: {
         backgroundColor: '#ffffff',
         height: 90,
