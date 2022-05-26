@@ -46,12 +46,17 @@ const RelatorioAvaliacao = ({route}) => {
             >
                 <EvaluationCard data={item} />
             </View>
-            <View style={{alignItems: 'center', flexDirection: 'row'}}>
-                <Button_ onPress={() => navigation.goBack()}>Voltar</Button_>
-
+            <View
+                style={{
+                    alignItems: 'center',
+                    flexDirection: 'row',
+                    justifyContent: 'space-around',
+                }}
+            >
                 {rule == 'aluno' ? null : (
                     <Button_ onPress={handleExcluir}>Excluir</Button_>
                 )}
+                <Button_ onPress={() => navigation.goBack()}>Voltar</Button_>
             </View>
         </View>
     );

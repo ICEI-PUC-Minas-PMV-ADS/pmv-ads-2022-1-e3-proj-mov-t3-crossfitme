@@ -58,7 +58,7 @@ const Avaliacoes = () => {
         <View style={styles.container}>
             {/* <SafeAreaView>
                 <ScrollView > */}
-            <View style={{marginBottom: 30}}>
+            <View style={{marginBottom: 30, marginTop: 15}}>
                 <ProfileCard
                     name={name}
                     source={require('../../assets/img/profile.jpg')}

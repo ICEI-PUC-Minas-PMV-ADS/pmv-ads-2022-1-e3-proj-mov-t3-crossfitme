@@ -127,7 +127,7 @@ const AulaDetalhe = ({route}) => {
 
             <View style={styles.buttonContainer}>
                 {rule == 'admin' ? (
-                    <Button_ onPress={handleCancelarAula} color='red'>
+                    <Button_ onPress={handleCancelarAula}>
                         Cancelar aula
                     </Button_>
                 ) : item.identificadorAulaUser == 0 ? (
