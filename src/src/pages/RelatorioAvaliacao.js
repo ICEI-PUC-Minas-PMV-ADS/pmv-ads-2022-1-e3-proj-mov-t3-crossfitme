@@ -6,11 +6,9 @@ import Button_ from '../components/Button_';
 import {useNavigation} from '@react-navigation/native';
 import {deleteRelatorio} from '../services/relatoriofisico.service';
 import {useUser} from '../contexts/UserContext';
-import ProfileCard from '../components/ProfileCard';
 
 const RelatorioAvaliacao = ({route}) => {
     const {item} = route.params;
-    const {name} = useUser();
     const {rule} = useUser();
 
     const handleExcluir = () => {
@@ -33,26 +31,15 @@ const RelatorioAvaliacao = ({route}) => {
                     </Card>
                 </View>
             ) : (
-                <View style={{marginBottom: 30}}>
-                    <ProfileCard
-                        name={name}
-                        source={require('../../assets/img/profile.jpg')}
-                    />
+                <View style={styles.cardContainer}>
+                    <Card style={styles.card}>
+                        <Card.Title
+                            titleStyle={styles.cardTitle}
+                            title={`Relatório de Avaliação Física`}
+                        />
+                    </Card>
                 </View>
             )}
-            <View
-                style={{
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignitem: 'center',
-                    marginBottom: 30,
-                }}
-            >
-                <FloatingIcon name={'file-document-outline'} />
-                <Text style={{fontFamily: 'Poppins-SemiBold', fontSize: 22}}>
-                    Relatório de Avaliação Física
-                </Text>
-            </View>
             <View
                 style={{
                     marginBottom: 30,
@@ -89,6 +76,6 @@ const styles = StyleSheet.create({
     },
     cardTitle: {
         alignSelf: 'center',
-        fontSize: 24,
+        fontSize: 21,
     },
 });

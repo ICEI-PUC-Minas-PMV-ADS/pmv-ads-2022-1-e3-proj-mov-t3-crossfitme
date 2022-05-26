@@ -60,7 +60,7 @@ const Aulas = () => {
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginBottom: 30,
+                    marginBottom: 20,
                 }}
             >
                 <FloatingIcon name={'map-marker-outline'} />
