@@ -17,7 +17,11 @@ const Perfil = () => {
     return (
         <Container>
             <View style={styles.topContainer}>
-                <Text style={styles.textRule}>{rule}</Text>
+                <View style={{}}>
+                    <Text style={styles.textRule}>{rule}</Text>
+                    {/* <Text style={styles.textDescription}>{name}</Text> */}
+                </View>
+
                 <Button
                     onPress={() => {
                         {

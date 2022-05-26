@@ -79,7 +79,7 @@ const AulaDetalhe = ({route}) => {
             <View style={styles.cardContainer}>
                 <Card style={styles.card}>
                     <Card.Title
-                        titleStyle={styles.cardTitle}
+                        titleStyle={styles.screenLabel}
                         title={'Alunos confirmados'}
                     />
                 </Card>
@@ -148,6 +148,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         marginTop: 15,
         flex: 1,
+        flexGrow: 1,
     },
     cardContainer: {marginTop: 15, marginBottom: 30},
     card: {
@@ -157,10 +158,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 8,
     },
-    // cardTitle: {
-    //     alignSelf: 'center',
-    //     fontSize: 24,
-    // },
+    screenLabel: {
+        alignSelf: 'center',
+        fontSize: 24,
+    },
     card: {
         flexBasis: 'auto',
         flexGrow: 1,
@@ -200,6 +201,6 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
     },
 });
