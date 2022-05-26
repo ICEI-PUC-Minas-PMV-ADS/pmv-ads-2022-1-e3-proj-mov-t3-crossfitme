@@ -1,6 +1,5 @@
 import {View, StyleSheet} from 'react-native';
-import {Card, Text} from 'react-native-paper';
-import FloatingIcon from '../components/FloatingIcon';
+import {Card} from 'react-native-paper';
 import EvaluationCard from '../components/EvaluationCard';
 import Button_ from '../components/Button_';
 import {useNavigation} from '@react-navigation/native';

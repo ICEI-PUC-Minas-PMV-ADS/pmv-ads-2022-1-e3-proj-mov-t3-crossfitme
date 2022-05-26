@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {BottomNavigation} from 'react-native-paper';
 import {StyleSheet} from 'react-native';
 import Perfil from './Perfil';

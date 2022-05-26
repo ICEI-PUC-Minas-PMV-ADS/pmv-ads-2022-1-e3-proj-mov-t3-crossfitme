@@ -1,14 +1,15 @@
 import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, FlatList, Alert} from 'react-native';
 import {Card, Text} from 'react-native-paper';
-import Button_ from '../components/Button_';
-import {useNavigation} from '@react-navigation/native';
-import {GetAlunosAula} from '../services/Aulas.service';
-import {useIsFocused} from '@react-navigation/native';
-import {PostAlunoAula} from '../services/Aulas.service';
+import {useNavigation, useIsFocused} from '@react-navigation/native';
 import {useUser} from '../contexts/UserContext';
-import {deleteAlunoAula} from '../services/Aulas.service';
-import {deleteAula} from '../services/Aulas.service';
+import {
+    PostAlunoAula,
+    GetAlunosAula,
+    deleteAlunoAula,
+    deleteAula,
+} from '../services/Aulas.service';
+import Button_ from '../components/Button_';
 
 const AulaDetalhe = ({route}) => {
     const {item} = route.params;

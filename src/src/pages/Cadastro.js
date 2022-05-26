@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import {Text, TextInput } from 'react-native-paper';
+import React, {useState} from 'react';
+import {Text} from 'react-native-paper';
 import {View, StyleSheet, Alert} from 'react-native';
 import Button_ from '../components/Button_';
 import Input from '../components/Input';
-import { register } from '../services/Auth.service';
-import { useNavigation } from '@react-navigation/native';
+import {register} from '../services/Auth.service';
+import {useNavigation} from '@react-navigation/native';
 import moment from 'moment';
 
 const Cadastro = () => {
@@ -20,31 +20,25 @@ const Cadastro = () => {
             name: nome,
             email: email,
             password: senha,
-            rule: "aluno", 
+            rule: 'aluno',
             endereco: endereco,
             nascimento: nascimento,
             desde: moment(new Date()).format('DD/MM/YYYY'),
+        }).then((res) => {
+            console.log(res);
 
-        }).then(res => {
-          console.log(res);
-    
-          if (res) {
-    
-            Alert.alert('Atenção', 'Usuário Cadastrado com sucesso!', [
-                { text: "OK", onPress: () => navigation.goBack() }
-              ]);
-    
-          } else {
-    
-            Alert.alert('Atenção', 'Usuário não cadastrado!');
-          }
-    
+            if (res) {
+                Alert.alert('Atenção', 'Usuário Cadastrado com sucesso!', [
+                    {text: 'OK', onPress: () => navigation.goBack()},
+                ]);
+            } else {
+                Alert.alert('Atenção', 'Usuário não cadastrado!');
+            }
         });
-      }
+    };
 
     return (
         <View style={styles.container}>
-         
             <Text style={styles.title}>CrossFitMe</Text>
             <View style={styles.inputContainer}>
                 <Text style={styles.subtitle}>Cadastro</Text>
@@ -53,7 +47,6 @@ const Cadastro = () => {
                     label='Nome'
                     value={nome}
                     onChangeText={(text) => setNome(text)}
-                    
                 />
                 <Input
                     style={{height: 50}}
@@ -81,7 +74,7 @@ const Cadastro = () => {
                     onChangeText={(text) => setSenha(text)}
                 />
                 <View style={styles.button}>
-                    <Button_ onPress = { handleRegister }>Cadastrar</Button_>
+                    <Button_ onPress={handleRegister}>Cadastrar</Button_>
                 </View>
                 <View
                     style={{
@@ -97,7 +90,7 @@ const Cadastro = () => {
                             fontFamily: 'Poppins-SemiBold',
                             fontSize: 16,
                         }}
-                        onPress = {() => navigation.goBack()}
+                        onPress={() => navigation.goBack()}
                     >
                         Fazer login
                     </Text>

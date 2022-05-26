@@ -6,7 +6,7 @@ import {
     SafeAreaView,
     ScrollView,
 } from 'react-native';
-import {Text, List, Card} from 'react-native-paper';
+import {Text} from 'react-native-paper';
 
 import ProfileCard from '../components/ProfileCard';
 import FloatingIcon from '../components/FloatingIcon';
@@ -15,11 +15,13 @@ import FloatingButton from '../components/FloatingButton';
 
 import {useNavigation} from '@react-navigation/native';
 import {useIsFocused} from '@react-navigation/native';
-import {useUser} from '../contexts/UserContext';
+
 import {
     GetRelatorios,
     GetRelatoriosAluno,
 } from '../services/relatoriofisico.service';
+
+import {useUser} from '../contexts/UserContext';
 
 const Avaliacoes = () => {
     const navigation = useNavigation();

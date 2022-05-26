@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, FlatList, Alert} from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 import {Text} from 'react-native-paper';
 
 import ProfileCard from '../components/ProfileCard';
@@ -10,10 +10,7 @@ import FloatingButton from '../components/FloatingButton';
 import {useNavigation} from '@react-navigation/native';
 import {useIsFocused} from '@react-navigation/native';
 import {useUser} from '../contexts/UserContext';
-import {GetAulas, GetQtdAlunosAula} from '../services/Aulas.service';
-import Button_ from '../components/Button_';
-
-import {GetAlunoAula} from '../services/Aulas.service';
+import {GetAulas, GetAlunoAula} from '../services/Aulas.service';
 
 const Aulas = () => {
     const navigation = useNavigation();
