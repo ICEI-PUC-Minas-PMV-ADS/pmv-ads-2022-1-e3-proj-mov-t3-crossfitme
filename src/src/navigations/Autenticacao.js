@@ -1,7 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import Navigation from '../components/Navigation';
 import Login from '../pages/Login';
 import Cadastro from '../pages/Cadastro';
 import CadastroAula from '../pages/CadastroAula';

@@ -1,21 +1,26 @@
-import React, {useState, useEffect} from 'react';
-import {Card} from 'react-native-paper';
-import {View, StyleSheet, Alert} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Card, TextInput } from 'react-native-paper';
+import { View, StyleSheet, Alert, TouchableOpacity } from 'react-native';
 import Input from '../components/Input';
 import Button_ from '../components/Button_';
-import {CadastrarAula} from '../services/Aulas.service';
-import {useUser} from '../contexts/UserContext';
-import {useNavigation} from '@react-navigation/native';
+import { CadastrarAula } from '../services/Aulas.service';
+import { useUser } from '../contexts/UserContext';
+import { useNavigation } from '@react-navigation/native';
+import moment from 'moment';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 const CadastroAula = () => {
     const navigation = useNavigation();
 
-    const [data, setData] = useState();
+    const [show, setShow] = useState(false);
+    const [data, setData] = useState(moment(new Date()).format('DD/MM/YYYY'));
+
+    const [showTime, setShowTime] = useState(false);
     const [hora, setHora] = useState();
     const [qtd, setQtd] = useState();
     const [descricao, setDescricao] = useState();
-    const {id} = useUser();
-    const {name} = useUser();
+    const { id } = useUser();
+    const { name } = useUser();
 
     const handleSalvar = () => {
         CadastrarAula({
@@ -31,7 +36,7 @@ const CadastroAula = () => {
 
             if (res) {
                 Alert.alert('Sucesso!', 'Aula Cadastrada com sucesso!', [
-                    {text: 'OK', onPress: () => navigation.goBack()},
+                    { text: 'OK', onPress: () => navigation.goBack() },
                 ]);
             } else {
                 Alert.alert('Falha!', 'Aula não cadastrada!');
@@ -49,31 +54,69 @@ const CadastroAula = () => {
                     />
                 </Card>
             </View>
-            <View style={{flex: 2}}>
+            <View style={{ flex: 2 }}>
                 <View style={styles.inputContainer}>
-                    <Input
-                        style={{height: 50}}
-                        label='Data'
-                        value={data}
-                        onChangeText={(text) => setData(text)}
-                    />
+
+                    {show && (
+                        <DateTimePicker
+                            testID="dateTimePicker"
+                            value={new Date()}
+                            mode={'date'}
+                            is24Hour={true}
+                            display="default"
+                            onTouchCancel={() => setShow(false)}
+                            onChange={(event, date) => {
+                                setShow(false);
+                                setData(moment(date).format('DD/MM/YYYY'));
+                            }}
+                        />
+                    )}
+
+                    <TouchableOpacity onPress={() => setShow(true)}>
+                        <Input
+                            label="Data"
+                            value={data}
+                            left={<TextInput.Icon name="calendar" />}
+                            editable={false}
+                        />
+                    </TouchableOpacity>
+
+                    {showTime && (
+                        <DateTimePicker
+                            testID="dateTimePicker"
+                            locale="pt-BR"
+                            value={new Date()}
+                            mode={'time'}
+                            is24Hour={true}
+                            display="default"
+                            onTouchCancel={() => setShowTime(false)}
+                            onChange={(event, time) => {
+                                setShowTime(false); 
+                                setHora(time.toTimeString().substring(0,5));
+                            }}
+                        />
+                    )}
+
+                    <TouchableOpacity onPress={() => setShowTime(true)}>
+                        <Input
+                            label="Hora"
+                            value={hora}
+                            left={<TextInput.Icon name="clock" />}
+                            editable={false}
+                        />
+                    </TouchableOpacity>
+
                     <Input
                         type
-                        style={{height: 50}}
-                        label='Hora'
-                        value={hora}
-                        onChangeText={(text) => setHora(text)}
-                    />
-                    <Input
-                        type
-                        style={{height: 50}}
+                        style={{ height: 50 }}
                         label='Quantidade de alunos'
+                        Type = 'number'
                         value={qtd}
                         onChangeText={(text) => setQtd(text)}
                     />
                     <Input
                         multiline={true}
-                        style={{height: 150}}
+                        style={{ height: 150 }}
                         label='Descrição da aula'
                         value={descricao}
                         onChangeText={(text) => setDescricao(text)}
@@ -95,7 +138,7 @@ const styles = StyleSheet.create({
         margin: 30,
         flex: 1,
     },
-    cardContainer: {flex: 1, marginTop: 15},
+    cardContainer: { flex: 1, marginTop: 15 },
     card: {
         backgroundColor: '#ffffff',
         height: 90,
@@ -107,7 +150,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         fontSize: 24,
     },
-    inputContainer: {marginBottom: 30},
+    inputContainer: { marginBottom: 30 },
     buttonContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',

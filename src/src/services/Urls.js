@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://few-trains-show-170-79-54-170.loca.lt';
+export const BASE_URL = 'https://dry-states-exist-45-187-115-12.loca.lt';

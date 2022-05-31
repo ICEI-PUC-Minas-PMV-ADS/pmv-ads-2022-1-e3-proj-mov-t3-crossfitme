@@ -3,12 +3,22 @@
     {
       "email": "Ana@gmail.com",
       "password": "$2a$10$nMaSeTvL7TxjfzRFQf7Nb.dbpE7KGXJUmVq.yXMAZprFcxR0dUI1m",
-      "name": "Ana",
+      "name": "Ana Claudia",
       "rule": "admin",
       "endereco": "rua morteiro, 351",
       "nascimento": "14/12/1999",
       "desde": "30/04/2022",
       "id": 1
+    },
+    {
+      "email": "igor@gmail.com",
+      "password": "$2a$10$lQVAIHnE.9YjwYwEY/nPN.QfhupdwJoFVGJsKGrtV3LI59byHwuny",
+      "name": "Igor@gmail.com",
+      "rule": "aluno",
+      "endereco": "Rua Monteiro Lobato, 363",
+      "nascimento": "14/05/1997",
+      "desde": "31/05/2022",
+      "id": 2
     }
   ],
   "aulas": [],
