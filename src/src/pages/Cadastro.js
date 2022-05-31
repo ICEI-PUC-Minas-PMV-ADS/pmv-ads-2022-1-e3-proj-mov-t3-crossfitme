@@ -8,7 +8,6 @@ import { useNavigation } from '@react-navigation/native';
 import moment from 'moment';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-
 const Cadastro = () => {
 
     const navigation = useNavigation();
@@ -47,6 +46,7 @@ const Cadastro = () => {
             <Text style={styles.title}>CrossFitMe</Text>
             <View style={styles.inputContainer}>
                 <Text style={styles.subtitle}>Cadastro</Text>
+           
                 <Input
                     style={{ height: 50 }}
                     label='Nome'

@@ -14,7 +14,6 @@ const CadastroAula = () => {
 
     const [show, setShow] = useState(false);
     const [data, setData] = useState(moment(new Date()).format('DD/MM/YYYY'));
-
     const [showTime, setShowTime] = useState(false);
     const [hora, setHora] = useState();
     const [qtd, setQtd] = useState();
@@ -110,7 +109,7 @@ const CadastroAula = () => {
                         type
                         style={{ height: 50 }}
                         label='Quantidade de alunos'
-                        Type = 'number'
+                        keyboardType='numeric'
                         value={qtd}
                         onChangeText={(text) => setQtd(text)}
                     />
