@@ -1,33 +1,49 @@
-import React, {useState} from 'react';
-import {Card} from 'react-native-paper';
-import {View, StyleSheet, Alert, ScrollView, SafeAreaView} from 'react-native';
+import React, { useState } from 'react';
+import { Card } from 'react-native-paper';
+import { View, StyleSheet, Alert, ScrollView, SafeAreaView } from 'react-native';
 import Input from '../components/Input';
 import Button_ from '../components/Button_';
-import {useUser} from '../contexts/UserContext';
-import {useNavigation} from '@react-navigation/native';
-import {CriarRelatorio} from '../services/relatoriofisico.service';
+import { useUser } from '../contexts/UserContext';
+import { CriarRelatorio } from '../services/relatoriofisico.service';
 import moment from 'moment';
+import { useNavigation } from '@react-navigation/native';
+import { PegarTodosAlunos } from '../services/Alunos.service';
+import DropDownPicker from 'react-native-dropdown-picker';
+
 
 const CadastroAvaliacao = () => {
+    const [open, setOpen] = useState(false);
+    const [alunoIdAlunoName, setAlunoIdAlunoName] = useState("");
+    const [listaDeAlunos] = useState([]);
+
     const navigation = useNavigation();
-    const [name, setName] = useState();
     const [idade, setIdade] = useState();
     const [classificacao, setClassificacao] = useState();
     const [massaGorda, setMassaGorda] = useState();
     const [massaMagra, setMassaMagra] = useState();
-    const [alunoId, setAlunoId] = useState();
     const [email, setEmail] = useState();
     const [peso, setPeso] = useState();
     const [altura, setAltura] = useState();
     const [imc, setImc] = useState();
     const [gordura, setGordura] = useState();
-    const {id} = useUser();
+    const { id } = useUser();
+
+
+    const handlePegarAlunos = () => {
+
+        PegarTodosAlunos().then((res) => {
+            if(listaDeAlunos.length != res.length){
+                while(listaDeAlunos.length){listaDeAlunos.pop}
+                res.forEach(item => { listaDeAlunos.push({ label: item, value: item }) })
+            }
+        });
+    }
 
     const handleSalvar = () => {
         CriarRelatorio({
             instrutorId: id,
-            alunoId: alunoId,
-            name: name,
+            alunoId: alunoIdAlunoName.toString().substring(0,1),
+            name: alunoIdAlunoName.toString().substring(3),
             idade: idade,
             classificacao: classificacao,
             email: email,
@@ -45,7 +61,7 @@ const CadastroAvaliacao = () => {
                 Alert.alert(
                     'Sucesso!',
                     'Relatório Físico Cadastrado com sucesso!',
-                    [{text: 'OK', onPress: () => navigation.goBack()}],
+                    [{ text: 'OK', onPress: () => navigation.goBack() }],
                 );
             } else {
                 Alert.alert('Falha!', 'Relatório Físico não cadastrado!');
@@ -63,22 +79,18 @@ const CadastroAvaliacao = () => {
                     />
                 </Card>
             </View>
-            <SafeAreaView style={{flex: 1}}>
+            <SafeAreaView style={{ flex: 1 }}>
+                <DropDownPicker
+                    placeholder='Selecione o aluno...'
+                    open={open}
+                    value={alunoIdAlunoName}
+                    items={listaDeAlunos}
+                    setOpen={setOpen}
+                    setValue={setAlunoIdAlunoName}
+                    onPress={handlePegarAlunos}
+                />
                 <ScrollView>
                     <View>
-                        <Input
-                            style={styles.input}
-                            label='Nome'
-                            value={name}
-                            onChangeText={(text) => setName(text)}
-                        />
-                        <Input
-                            style={styles.input}
-                            label='Id'
-                            value={alunoId}
-                            keyboardType='numeric'
-                            onChangeText={(text) => setAlunoId(text)}
-                        />
                         <Input
                             style={styles.input}
                             label='E-mail'

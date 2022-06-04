@@ -124,20 +124,3 @@ export const deleteAlunoAula = async (aulaUserId) => {
         return null;
     }
 };
-
-// export const GetAlunosAula = async () => {
-//   try{
-//     return await API.get(`${BASE_URL}/660/aulauser?aulaId=/${id}`).then(
-//       response => {
-//         return response.data;
-//       },
-//       error =>{
-//         console.log(error);
-//         return  null;
-//       }
-//     );
-//   }catch(error){
-//     console.log(error);
-//     return null;
-//   }
-// }
