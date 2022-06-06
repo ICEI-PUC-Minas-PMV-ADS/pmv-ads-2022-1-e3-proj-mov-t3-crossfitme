@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://chilly-poets-vanish-45-187-115-12.loca.lt';
+export const BASE_URL = 'https://cool-eels-doubt-201-148-115-2.loca.lt';

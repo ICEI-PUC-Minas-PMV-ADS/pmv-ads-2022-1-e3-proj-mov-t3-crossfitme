@@ -22,7 +22,7 @@ const Cadastro = () => {
     const handleRegister = () => {
         register({
             name: nome,
-            email: email,
+            email: email.toLowerCase(),
             password: senha,
             rule: 'aluno',
             endereco: endereco,
@@ -43,7 +43,9 @@ const Cadastro = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>CrossFitMe</Text>
+            <View>
+                <Text style={styles.title}>CrossFitMe</Text>
+            </View>
             <View style={styles.inputContainer}>
                 <Text style={styles.subtitle}>Cadastro</Text>
            
@@ -128,25 +130,21 @@ export default Cadastro;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         margin: 30,
+        flex: 1,
         justifyContent: 'center',
     },
     title: {
         fontFamily: 'Poppins-SemiBold',
         fontSize: 46,
         textAlign: 'center',
-        marginBottom: 60,
-        marginTop: 60,
+        marginBottom: 10,
+        marginTop: 90,
     },
     subtitle: {
-        fontSize: 30,
+        fontSize: 28,
         textAlign: 'center',
-        marginBottom: 30,
-    },
-    inputContainer: {
-        justifyContent: 'center',
-        flex: 1,
+        marginBottom: 10,
     },
     button: {
         alignItems: 'center',
