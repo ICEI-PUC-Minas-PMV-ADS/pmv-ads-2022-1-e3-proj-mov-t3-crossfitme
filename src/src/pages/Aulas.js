@@ -10,7 +10,7 @@ import FloatingButton from '../components/FloatingButton';
 import {useNavigation} from '@react-navigation/native';
 import {useIsFocused} from '@react-navigation/native';
 import {useUser} from '../contexts/UserContext';
-import {GetAulas, GetAlunoAula} from '../services/Aulas.service';
+import {GetTBLAulas, GetTBLAulaUser} from '../services/Aulas.service';
 
 const Aulas = () => {
     const navigation = useNavigation();
@@ -18,25 +18,31 @@ const Aulas = () => {
     const {name} = useUser();
     const {id} = useUser();
     const {rule} = useUser();
-    const [aula, setAula] = useState([]);
+    const [aulas, setAulas] = useState([]);
+    const [aulasUsers, setAulaUser] = useState([]);
 
     useEffect(() => {
-        GetAulas().then((dados) => {
-            setAula(dados);
-        });
+        GetTBLAulas().then( resp => { setAulas(resp) } ) 
+        GetTBLAulaUser().then( resp => { setAulaUser(resp)})  
     }, [isFocused]);
 
     const renderItem = ({item}) => {
-        console.log('id: ' + item.id + 'idUser: ' + id);
+        var contador = 0;
+        aulasUsers.forEach(aulauser => {
+            if(aulauser.aulaId == item.id)
+                contador++;
 
-        GetAlunoAula(item.id, id).then(
-            (info) => (item.identificadorAulaUser = info),
-        );
+            if(aulauser.aulaId == item.id && aulauser.userId == id)
+                item.identificadorAulaUser = aulauser.id;
+            else{item.identificadorAulaUser = 0 }
+        });
+        item.qtdeAtualAlunos = contador;
+
 
         return (
             <ClassCard
-                qtd={'/' + item.qtdAlunos}
-                time={item.hora} //item={item}
+                qtd={item.qtdeAtualAlunos + '/' + item.qtdeMaxAlunos}
+                time={item.hora} 
                 onPress={() => navigation.navigate('AulaDetalhe', {item: item})}
             >
                 {item.descricao}
@@ -67,7 +73,7 @@ const Aulas = () => {
             </View>
             <View style={styles.flatList}>
                 <FlatList
-                    data={aula}
+                    data={aulas}
                     renderItem={renderItem}
                     keyExtractor={(item) => item.id}
                     showsVerticalScrollIndicator={false}

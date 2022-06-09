@@ -27,12 +27,11 @@ const CadastroAula = () => {
             instrutorName: name,
             data: data,
             hora: hora,
-            qtdAlunos: qtd,
+            qtdeMaxAlunos: qtd,
             descricao: descricao,
             identificadorAulaUser: 0,
+            qtdeAtualAlunos: 0,
         }).then((res) => {
-            console.log(res);
-
             if (res) {
                 Alert.alert('Sucesso!', 'Aula Cadastrada com sucesso!', [
                     { text: 'OK', onPress: () => navigation.goBack() },

@@ -21,7 +21,6 @@ const CadastroAvaliacao = () => {
     const [classificacao, setClassificacao] = useState();
     const [massaGorda, setMassaGorda] = useState();
     const [massaMagra, setMassaMagra] = useState();
-    const [email, setEmail] = useState();
     const [peso, setPeso] = useState();
     const [altura, setAltura] = useState();
     const [imc, setImc] = useState();
@@ -32,8 +31,8 @@ const CadastroAvaliacao = () => {
     const handlePegarAlunos = () => {
 
         PegarTodosAlunos().then((res) => {
-            if(listaDeAlunos.length != res.length){
-                while(listaDeAlunos.length){listaDeAlunos.pop}
+            if (listaDeAlunos.length != res.length) {
+                while (listaDeAlunos.length) { listaDeAlunos.pop }
                 res.forEach(item => { listaDeAlunos.push({ label: item, value: item }) })
             }
         });
@@ -42,11 +41,10 @@ const CadastroAvaliacao = () => {
     const handleSalvar = () => {
         CriarRelatorio({
             instrutorId: id,
-            alunoId: alunoIdAlunoName.toString().substring(0,1),
+            alunoId: alunoIdAlunoName.toString().substring(0, 1),
             name: alunoIdAlunoName.toString().substring(3),
             idade: idade,
             classificacao: classificacao,
-            email: email,
             data: moment(new Date()).format('DD/MM/YYYY'),
             peso: peso,
             altura: altura,
@@ -55,17 +53,14 @@ const CadastroAvaliacao = () => {
             massaGorda: massaGorda,
             massaMagra: massaMagra,
         }).then((res) => {
-            console.log(res);
-
             if (res) {
                 Alert.alert(
                     'Sucesso!',
                     'Relatório Físico Cadastrado com sucesso!',
                     [{ text: 'OK', onPress: () => navigation.goBack() }],
                 );
-            } else {
+            } else
                 Alert.alert('Falha!', 'Relatório Físico não cadastrado!');
-            }
         });
     };
 
@@ -91,12 +86,6 @@ const CadastroAvaliacao = () => {
                 />
                 <ScrollView>
                     <View>
-                        <Input
-                            style={styles.input}
-                            label='E-mail'
-                            value={email}
-                            onChangeText={(text) => setEmail(text)}
-                        />
                         <Input
                             style={styles.input}
                             label='Idade'

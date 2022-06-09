@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react';
-import {Text} from 'react-native-paper';
-import {View, StyleSheet, Alert} from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import React, { useState, useEffect } from 'react';
+import { Text } from 'react-native-paper';
+import { View, StyleSheet, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Button_ from '../components/Button_';
 import TextButton from '../components/TextButton';
 import Input from '../components/Input';
-import {login} from '../services/Auth.service';
-import {useUser} from '../contexts/UserContext';
+import { login } from '../services/Auth.service';
+import { useUser } from '../contexts/UserContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getToken, insertToken} from '../services/CrossFitMeServicesDB';
+import { getToken, insertToken } from '../services/CrossFitMeServicesDB';
 
 const Login = () => {
     const navigation = useNavigation();
@@ -37,7 +37,7 @@ const Login = () => {
                 setId(res.user_id);
                 AsyncStorage.setItem('@TOKEN_KEY', res.token)
                     .then(() => setSigned(true))
-                    .catch((error) => {});
+                    .catch((error) => { });
             }
         });
     }, []);
@@ -99,7 +99,7 @@ const Login = () => {
                     alignItems: 'center',
                 }}
             >
-                <Text style={{marginRight: 5, fontSize: 16}}>
+                <Text style={{ marginRight: 5, fontSize: 16 }}>
                     Não tem uma conta?
                 </Text>
                 <TextButton onPress={() => navigation.navigate('Cadastro')}>

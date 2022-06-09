@@ -18,7 +18,7 @@ export const CadastrarAula = async (param) => {
     }
 };
 
-export const GetAulas = async () => {
+export const GetTBLAulas = async () => {
     try {
         return await API.get(`${BASE_URL}/660/aulas`).then(
             (response) => {
@@ -35,7 +35,7 @@ export const GetAulas = async () => {
     }
 };
 
-export const deleteAula = async (id) => {
+export const DeleteAulaPeloId = async (id) => {
     try {
         return await API.delete(`${BASE_URL}/660/aulas/${id}`).then(
             (response) => {
@@ -52,8 +52,15 @@ export const deleteAula = async (id) => {
     }
 };
 
-export const GetAlunosAula = async (id) => {
-    try {
+export const GetTBLAulaUser = async () => {
+        return await API.get(`${BASE_URL}/aulauser`).then( resp => 
+            {
+                return resp.data;
+            }
+        );
+};
+
+export const GetAlunosConfirmadosNaAula = async (id) => {
         return await API.get(`${BASE_URL}/aulauser?aulaId=${id}`).then(
             (response) => {
                 return response.data;
@@ -63,10 +70,7 @@ export const GetAlunosAula = async (id) => {
                 return null;
             },
         );
-    } catch (error) {
-        console.log(error);
-        return null;
-    }
+  
 };
 
 export const GetAlunoAula = async (aulaId, userId) => {
@@ -91,7 +95,7 @@ export const GetAlunoAula = async (aulaId, userId) => {
     }
 };
 
-export const PostAlunoAula = async (param) => {
+export const AgendarAlunoNaAula = async (param) => {
     try {
         return await API.post(`${BASE_URL}/660/aulauser`, param).then(
             (response) => {
@@ -108,9 +112,9 @@ export const PostAlunoAula = async (param) => {
     }
 };
 
-export const deleteAlunoAula = async (aulaUserId) => {
-    try {
-        return await API.delete(`${BASE_URL}/aulauser/${aulaUserId}`).then(
+export const DeleteAlunoDaAulaUser = async (Id) => {
+  
+        return await API.delete(`${BASE_URL}/aulauser/${Id}`).then(
             (response) => {
                 return response.data;
             },
@@ -119,8 +123,5 @@ export const deleteAlunoAula = async (aulaUserId) => {
                 return null;
             },
         );
-    } catch (error) {
-        console.log(error);
-        return null;
-    }
+
 };
