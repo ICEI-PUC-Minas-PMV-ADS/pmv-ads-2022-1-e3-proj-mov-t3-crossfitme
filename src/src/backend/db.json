@@ -53,8 +53,35 @@
       "identificadorAulaUser": 0,
       "qtdeAtualAlunos": 0,
       "id": 2
+    },
+    {
+      "instrutorId": 1,
+      "instrutorName": "Ana Claudia",
+      "data": "18/06/2022",
+      "hora": "11:02",
+      "qtdeMaxAlunos": "10",
+      "descricao": "Aula zumba.",
+      "identificadorAulaUser": 0,
+      "qtdeAtualAlunos": 0,
+      "id": 3
     }
   ],
   "aulaUser": [],
-  "relatorios": []
+  "relatorios": [
+    {
+      "instrutorId": 1,
+      "alunoId": "3",
+      "name": " Igor Vicente",
+      "idade": "25",
+      "classificacao": "Ruin",
+      "data": "18/06/2022",
+      "peso": "80",
+      "altura": "1,74",
+      "imc": "88",
+      "gordura": "5%",
+      "massaGorda": "652",
+      "massaMagra": "546",
+      "id": 1
+    }
+  ]
 }

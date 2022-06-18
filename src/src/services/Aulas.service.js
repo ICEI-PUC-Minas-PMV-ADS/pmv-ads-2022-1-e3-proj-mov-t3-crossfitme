@@ -18,9 +18,11 @@ export const CadastrarAula = async (param) => {
     }
 };
 
-export const GetTBLAulas = async () => {
+export const GetTBLAulas = async (dt) => {
     try {
-        return await API.get(`${BASE_URL}/660/aulas`).then(
+        return await API.get(`${BASE_URL}/660/aulas?data=${dt}`).then(
+
+        //return await API.get(`${BASE_URL}/660/aulas`).then(
             (response) => {
                 return response.data;
             },
