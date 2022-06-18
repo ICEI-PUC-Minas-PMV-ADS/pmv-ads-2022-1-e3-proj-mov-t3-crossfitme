@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, FlatList, Alert } from 'react-native';
-import { Card, Text } from 'react-native-paper';
-import { useNavigation, useIsFocused } from '@react-navigation/native';
-import { useUser } from '../contexts/UserContext';
+import React, {useState, useEffect} from 'react';
+import {View, StyleSheet, FlatList, Alert} from 'react-native';
+import {Card, Text} from 'react-native-paper';
+import {useNavigation, useIsFocused} from '@react-navigation/native';
+import {useUser} from '../contexts/UserContext';
 import {
     AgendarAlunoNaAula,
     GetAlunosConfirmadosNaAula,
@@ -11,15 +11,14 @@ import {
 } from '../services/Aulas.service';
 import Button_ from '../components/Button_';
 
-const AulaDetalhe = ({ route }) => {
-    const { item } = route.params;
+const AulaDetalhe = ({route}) => {
+    const {item} = route.params;
     const navigation = useNavigation();
     const isFocused = useIsFocused();
-    const { id } = useUser();
-    const { name } = useUser();
-    const { rule } = useUser();
+    const {id} = useUser();
+    const {name} = useUser();
+    const {rule} = useUser();
     const [alunos, setAlunos] = useState([]);
-
 
     useEffect(() => {
         GetAlunosConfirmadosNaAula(item.id).then((resp) => {
@@ -27,7 +26,7 @@ const AulaDetalhe = ({ route }) => {
         });
     }, [isFocused]);
 
-    const renderAluno = ({ item }) => (
+    const renderAluno = ({item}) => (
         <View style={styles.row}>
             <View>
                 <Text style={styles.cardTitle}> {item.userName} </Text>
@@ -38,22 +37,27 @@ const AulaDetalhe = ({ route }) => {
     const handleDesmarcar = () => {
         DeleteAlunoDaAulaUser(item.identificadorAulaUser).then(() => {
             Alert.alert('Sucesso!', 'Agendamento cancelado!', [
-                { text: 'OK', onPress: () => navigation.goBack() },
+                {text: 'OK', onPress: () => navigation.goBack()},
             ]);
         });
     };
 
     const handleCheckIn = () => {
-        if (item.qtdeAtualAlunos >= item.qtdeMaxAlunos) 
-            Alert.alert('Lotado!', 'Capacidade máxima atingida, fique atendo se houver desistência ou agende para outro horário.');
-        else{
-            AgendarAlunoNaAula({ aulaId: item.id, userId: id, userName: name, }).then((res) => {
+        if (item.qtdeAtualAlunos >= item.qtdeMaxAlunos)
+            Alert.alert(
+                'Lotado! Capacidade máxima atingida. Fique atento se houver desistência ou agende para outro horário.',
+            );
+        else {
+            AgendarAlunoNaAula({
+                aulaId: item.id,
+                userId: id,
+                userName: name,
+            }).then((res) => {
                 if (res) {
                     Alert.alert('Sucesso!', 'Agendamento realizado!', [
-                        { text: 'OK', onPress: () => navigation.goBack() },
+                        {text: 'OK', onPress: () => navigation.goBack()},
                     ]);
-                } else
-                    Alert.alert('Falha!', 'Não agendado!');
+                } else Alert.alert('Falha!', 'Não agendado!');
             });
         }
     };
@@ -62,7 +66,7 @@ const AulaDetalhe = ({ route }) => {
         DeleteAulaPeloId(item.id).then((res) => {
             if (res) {
                 Alert.alert('Sucesso!', 'Aula cancelada!', [
-                    { text: 'OK', onPress: () => navigation.goBack() },
+                    {text: 'OK', onPress: () => navigation.goBack()},
                 ]);
             } else {
                 Alert.alert('Falha!', 'Aula não cancelada!');
@@ -93,7 +97,7 @@ const AulaDetalhe = ({ route }) => {
                                 {item.instrutorName}
                             </Text>
                         </View>
-                        <View style={{ ...styles.rowAlt, marginBottom: 15 }}>
+                        <View style={{...styles.rowAlt, marginBottom: 15}}>
                             <View>
                                 <Text style={styles.cardTitle}>Data</Text>
                                 <Text style={styles.cardText}>{item.data}</Text>
@@ -115,7 +119,6 @@ const AulaDetalhe = ({ route }) => {
                         </View>
                     </View>
                 </Card>
-
             </View>
 
             <View style={styles.buttonContainer}>
@@ -143,7 +146,7 @@ const styles = StyleSheet.create({
         marginTop: 15,
         flex: 1,
     },
-    cardContainer: { marginTop: 15, marginBottom: 30 },
+    cardContainer: {marginTop: 15, marginBottom: 30},
     cardTop: {
         backgroundColor: '#ffffff',
         flexDirection: 'row',

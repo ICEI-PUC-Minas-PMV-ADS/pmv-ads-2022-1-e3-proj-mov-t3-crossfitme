@@ -8,7 +8,7 @@ const ProfileCard = (props) => (
             title={'Olá, ' + props.name}
             left={() => (
                 <Avatar.Image
-                    style={{marginLeft: 20, marginRight: 20}}
+                    style={{marginLeft: 0, marginRight: 20}}
                     size={70}
                     source={props.source}
                 />
