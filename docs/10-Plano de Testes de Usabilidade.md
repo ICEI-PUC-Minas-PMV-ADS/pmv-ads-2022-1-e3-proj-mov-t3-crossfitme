@@ -95,31 +95,21 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
        <tbody>
         <tr> 
             <td>Objetivo</td>
-            <td>
-       Navegação e utilização dos recursos da tela cadastro do horário. 
-            </td>
+            <td> Navegação e utilização dos recursos da tela cadastro do horário.  </td>
         </tr>
         <tr> 
             <td>Resultado Esperado</td>
-            <td>
-      Execução da tarefa com menor nível de dificuldade possível.(Em um curto espaço de tempo).
-            </td>
+            <td> Execução da tarefa com menor nível de dificuldade possível.(Em um curto espaço de tempo). </td>
         </tr>
         <tr> 
             <td>Tempo de execução estimado (segundos) </td>
-            <td>
-          60
-            </td>
+            <td> 60 </td>
         </tr>
         <tr> 
             <td>Número de usuários</td>
-            <td>
-     5
-
-</td>
-</tr>
-</tbody>
-
+            <td> 5 </td>
+        </tr>
+        </tbody>
 </table>
 
 <table>
@@ -130,31 +120,75 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
         </tr>
     </thead>
        <tbody>
-        <tr> 
-            <td>Objetivo</td>
-            <td>
-     Navegação e utilização dos recursos do botão de check-in. 
-            </td>
-        </tr>
-        <tr> 
-            <td>Resultado Esperado</td>
-            <td>
-       Execução de tarefas com menor nível de dificuldade possível.(Em um curto espaço de tempo).
-            </td>
-        </tr>
-        <tr> 
-            <td>Tempo de execução estimado (segundos) </td>
-            <td>
-          60
-            </td>
-        </tr>
-        <tr> 
-            <td>Número de usuários</td>
-            <td>
-     5
+            <tr> 
+                <td>Objetivo</td>
+                <td>Navegação e utilização dos recursos do botão de check-in. </td>
+            </tr>
+            <tr> 
+                <td>Resultado Esperado</td>
+                <td>Execução de tarefas com menor nível de dificuldade possível.(Em um curto espaço de tempo).</td>
+            </tr>
+            <tr> 
+                <td>Tempo de execução estimado (segundos) </td>
+                <td> 60  </td>
+            </tr>
+            <tr> 
+                <td>Número de usuários</td>
+                <td>5</td>
+            </tr>
+    </tbody>
+</table>
 
-</td>
-</tr>
-</tbody>
+<table>
+    <thead>
+        <tr> 
+            <th>Código</th>
+            <th>TU-05 – Acessar histórico de treinos </th>
+        </tr>
+    </thead>
+       <tbody>
+            <tr> 
+                <td>Objetivo</td>
+                <td>  Navegação e utilização dos recursos de histórico. </td>
+            </tr>
+            <tr> 
+                <td>Resultado Esperado</td>
+                <td>Execução de tarefas com menor nível de dificuldade possível.(Em um curto espaço de tempo).</td>
+            </tr>
+            <tr> 
+                <td>Tempo de execução estimado (segundos) </td>
+                <td> 60 </td>
+            </tr>
+            <tr> 
+                <td>Número de usuários</td>
+                <td> 5 </td>
+            </tr>
+        </tbody>
+</table>
 
+<table>
+    <thead>
+        <tr> 
+            <th>Código</th>
+            <th>TU-06 – Cadastrar relatório </th>
+        </tr>
+    </thead>
+       <tbody>
+            <tr> 
+                <td>Objetivo</td>
+                <td>  Navegação e utilização de cadastro de relatório. </td>
+            </tr>
+            <tr> 
+                <td>Resultado Esperado</td>
+                <td>Execução de tarefas com menor nível de dificuldade possível.(Em um curto espaço de tempo).</td>
+            </tr>
+            <tr> 
+                <td>Tempo de execução estimado (segundos) </td>
+                <td> 60 </td>
+            </tr>
+            <tr> 
+                <td>Número de usuários</td>
+                <td> 5 </td>
+            </tr>
+        </tbody>
 </table>

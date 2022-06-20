@@ -70,8 +70,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-003 | O instrutor deve cadastrar a lotação máxima por horário.                                                                    | ALTA       |
 | RF-004 | O usuário deve conseguir fazer o checkpoint para o treino, em determinado horário, caso esse não esteja com lotação máxima. | ALTA       |
 | RF-005 | O usuário deve conseguir visualizar o histórico de seus treinos.                                                            | MÉDIA      |
-| RF-005 | O instrutor deve divulgar o relatório de avaliação física dos seus usuários.                                                | MÉDIA      |
-| RF-005 | O usuário deve conseguir visualizar o seu relatório de avaliação física.                                                    | MÉDIA      |
+| RF-006 | O instrutor deve divulgar o relatório de avaliação física dos seus usuários.                                                | MÉDIA      |
+| RF-007 | O usuário deve conseguir visualizar o seu relatório de avaliação física.                                                    | MÉDIA      |
 
 ### Requisitos não Funcionais
 

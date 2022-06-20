@@ -6,7 +6,7 @@
     <thead>
         <tr> 
             <th>Caso do Teste</th>
-            <th>CT-01 – Cadastro e Login no Aplicativo</th>
+            <th>CT-01 – Cadastro e Login no Aplicativo.</th>
         </tr>
     </thead>
        <tbody>
@@ -49,7 +49,7 @@ O cadastro deve ser feito e concluído com sucesso.
     <thead>
         <tr> 
             <th>Caso do Teste</th>
-            <th>CT-02 – Instrutor de Treino deve conseguir cadastrar horários para treino</th>
+            <th>CT-02 – Instrutor de Treino deve conseguir cadastrar horários para treino.</th>
         </tr>
     </thead>
        <tbody>
@@ -130,7 +130,7 @@ Ao clicar no botão referente a categoria, o instrutor deve conseguir disponibil
     <thead>
         <tr> 
             <th>Caso do Teste</th>
-            <th>CT- 04 – Usuário deve conseguir agendar e fazer o checkpoint do seu treino </th>
+            <th>CT- 04 – Usuário deve conseguir agendar e fazer o checkpoint em determinado horário. </th>
         </tr>
     </thead>
        <tbody>
@@ -166,6 +166,126 @@ Após a seleção do instrutor, treino e horário, o usuário deve conseguir faz
 </tr>
 </tbody>
  </table>
+
+ <table>
+    <thead>
+        <tr> 
+            <th>Caso do Teste</th>
+            <th>CT-05 –  O usuário deve conseguir visualizar o histórico de seus treinos realizados.  </th>
+        </tr>
+    </thead>
+       <tbody>
+        <tr> 
+            <td>Requisitos Associados</td>
+            <td>
+              RF – 05 -  O usuário deve conseguir visualizar o histórico de seus treinos.  
+            </td>
+        </tr>
+        <tr> 
+            <td>Objetivos do Teste</td>
+            <td>
+            Validar se a página será exibida corretamente e se permitirá ao usuário verificar histórico de treinos realizados. 
+            </td>
+        </tr>
+        <tr> 
+            <td>Passos</td>
+            <td>
+                1. Acessar o site que hospeda o aplicativo; </br>
+                2. Baixar o Aplicativo; </br>
+                3. Instalar no smartphone; </br>
+                4. Acessar a funcionalidade de histórico; </br>
+            </td>
+        </tr>
+        <tr> 
+            <td>Critérios de Êxito</td>
+            <td>
+              Após participar de aulas/treinos, deve ser disponibilizada ao usuário uma lista com todas aulas já realizadas.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+ <table>
+    <thead>
+        <tr> 
+            <th>Caso do Teste</th>
+            <th>CT-06 –  O instrutor deve ser capaz de disponibilizar relatórios de avaliação física aos alunos cadastrados no sistema.  </th>
+        </tr>
+    </thead>
+       <tbody>
+        <tr> 
+            <td>Requisitos Associados</td>
+            <td>
+              RF – 06 -  O instrutor deve divulgar o relatório de avaliação física dos seus usuários.  
+            </td>
+        </tr>
+        <tr> 
+            <td>Objetivos do Teste</td>
+            <td>
+            Validar se a página será exibida corretamente e se permitirá ao instrutor gerar um relatório sobre a evolução/regressão física do aluno especificado. 
+            </td>
+        </tr>
+        <tr> 
+            <td>Passos</td>
+            <td>
+                1. Acessar o site que hospeda o aplicativo; </br>
+                2. Baixar o Aplicativo; </br>
+                3. Instalar no smartphone; </br>
+                4. Acessar as funcionalidades de cadastro de avaliação; </br>
+                5. Selecionar o aluno dentre os alunos da lista; </br>
+                6. Preencher os campos; </br>
+                7. Salvar e publicar a informação para o usuário; </br>
+            </td>
+        </tr>
+        <tr> 
+            <td>Critérios de Êxito</td>
+            <td>
+              Após cadastro do relatório apenas o aluno especificado e o instrutor deve ser capaz de acessá-lo, sendo permitido exclusão do relatório unicamente pelo instrutor que o gerou. 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+ <table>
+    <thead>
+        <tr> 
+            <th>Caso do Teste</th>
+            <th>CT-07 –  O usuário deve conseguir visualizar o seu relatório de avaliação física.     </th>
+        </tr>
+    </thead>
+       <tbody>
+        <tr> 
+            <td>Requisitos Associados</td>
+            <td>
+              RF – 07 -  O usuário deve conseguir visualizar o seu relatório de avaliação física.     
+            </td>
+        </tr>
+        <tr> 
+            <td>Objetivos do Teste</td>
+            <td>
+            Validar se a página será exibida corretamente e se permitirá ao usuário visualizar o relatório contendo informações de sua saúde física. 
+            </td>
+        </tr>
+        <tr> 
+            <td>Passos</td>
+            <td>
+                1. Acessar o site que hospeda o aplicativo; </br>
+                2. Baixar o Aplicativo; </br>
+                3. Instalar no smartphone; </br>
+                4. Acessar as funcionalidades de avaliações físicas; </br>
+                5. Selecionar a avaliação (caso o instrutor tenha realizado) ; </br>
+                6. Visualizar os campos; </br>
+            </td>
+        </tr>
+        <tr> 
+            <td>Critérios de Êxito</td>
+            <td>
+              Após logado no sistema o usuário deve ser capaz de visualizar seus relatórios de avaliação física, não tendo autorização para edição do mesmo, bem como não deve ser capaz de visualizar relatórios de outros usuários. 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 
 Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
 
